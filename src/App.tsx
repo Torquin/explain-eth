@@ -6,11 +6,15 @@ import TokensPage from './pages/TokensPage'
 import Apps2Page from './pages/Apps2Page'
 import PlaygroundPage from './pages/PlaygroundPage'
 import { BlockchainProvider } from './contexts/BlockchainContext'
+import LanguageDropdown from './components/LanguageDropdown';
 
 function App() {
   return (
     <BrowserRouter>
       <BlockchainProvider>
+        <div className="absolute top-4 right-4 z-50">
+          <LanguageDropdown />
+        </div>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/intro" element={<IntroPage />} />

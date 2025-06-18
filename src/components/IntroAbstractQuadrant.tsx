@@ -525,7 +525,7 @@ const NewApps = ({ isVisible }: AnimationComponentProps) => {
 }
 
 interface IntroAbstractQuadrantProps {
-  quadrantType?: 'Send/Receive Money' | 'Split Bills' | 'Earn Interest' | 'New Apps'
+  quadrantType?: string
 }
 
 const IntroAbstractQuadrant: React.FC<IntroAbstractQuadrantProps> = ({ quadrantType }) => {

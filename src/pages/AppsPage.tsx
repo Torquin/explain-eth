@@ -14,8 +14,10 @@ import {
 } from "../components/Footnote";
 import Vocab from "../components/Vocab";
 import { getRecipientEmoji, getRecipientAddressTruncated } from "../utils/recipients";
+import { useTranslation } from 'react-i18next';
 
 const AppsPage: React.FC = () => {
+  const { t } = useTranslation();
   const [isHistoryOpen, setIsHistoryOpen] = useState(false);
 
   const {
@@ -35,66 +37,53 @@ const AppsPage: React.FC = () => {
           <article className="prose prose-invert prose-lg max-w-none">
             {/* Apps Section */}
             <section className="mb-16">
-              <h1 className="text-4xl font-bold text-white mb-8">Apps</h1>
+              <h1 className="text-4xl font-bold text-white mb-8">{t('AppsPage.apps')}</h1>
 
               <p>
-                An app on Ethereum is a program that can also send or receive
-                ETH <Vocab>according to its own rules</Vocab>.
+                {t('AppsPage.an-app-on-ethereum-is-a-program-that-can-also-send-or-receive-eth')} <Vocab>{t('AppsPage.according-to-its-own-rules')}</Vocab>.
               </p>
 
               <p>
-                In blockchain jargon, this type of program is called a{" "}
-                <Vocab>smart contract</Vocab>.
+                {t('AppsPage.in-blockchain-jargon-this-type-of-program-is-called-a')}{" "}
+                <Vocab>{t('AppsPage.smart-contract')}</Vocab>.
               </p>
 
               <p>
-                What do these programs look like?
-              </p>
+                {t('AppsPage.what-do-these-programs-look-like')} </p>
 
               <p>
-                What kinds of rules can we set?
-              </p>
+                {t('AppsPage.what-kinds-of-rules-can-we-set')} </p>
 
               <p>
-                How can they be useful?
-              </p>
+                {t('AppsPage.how-can-they-be-useful')} </p>
 
               <p>
                 <i>
-                  When will I stop with these hackneyed rhetorical questions?
-                </i>
+                  {t('AppsPage.when-will-i-stop-with-these-hackneyed-rhetorical-questions')} </i>
               </p>
 
               <p>
-                Okay, okay, let's get back to an example.
-              </p>
+                {t('AppsPage.okay-okay-lets-get-back-to-an-example')} </p>
 
               <p>
-                Remember that example earlier, where we had to pay Alice, Bob,{" "}
-                <em>and</em> Carol one at a time? Sending money to all three of
-                them took several button clicks.
-              </p>
+                {t('AppsPage.remember-that-example-earlier-where-we-had-to-pay-alice-bob')},{" "}
+                <em>and</em> {t('AppsPage.carol-one-at-a-time-sending-money-to-all-three-of-them-took-several-button-clicks')} </p>
 
               <p>
-                What if we could automate that to just one click?
-              </p>
+                {t('AppsPage.what-if-we-could-automate-that-to-just-one-click')} </p>
 
               <p className="mb-8">
-                Let's look at a simplified smart contract{" "}
+                {t('AppsPage.lets-look-at-a-simplified-smart-contract')}
                 <FootnoteRef id="contract">
-                  This is a simplified example that doesn't use real code,
-                  of course. To learn more, check out{" "}
+                  {t('AppsPage.this-is-a-simplified-example-that-doesnt-use-real-code-of-course-to-learn-more-check-out')}{" "}
                   <a
                     href="https://docs.soliditylang.org/en/v0.8.30/introduction-to-smart-contracts.html"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:text-blue-300 underline"
                   >
-                    Solidity
-                  </a>
-                  , a programming language used to write smart contracts on
-                  Ethereum.
-                </FootnoteRef>
+                    {t('AppsPage.solidity')} </a>
+                  {t('AppsPage.a-programming-language-used-to-write-smart-contracts-on-ethereum')} </FootnoteRef>
                 :
               </p>
 
@@ -114,53 +103,35 @@ END`}
               </div>
 
               <p>
-                What does it do?
-              </p>
+                {t('AppsPage.what-does-it-do')} </p>
 
               <p>
-                (If you haven't read or written code before, don't worry, just
-                try to read the above text like a formal agreement, or a
-                specific formula and see if it makes some sense.)
-              </p>
+                {t('AppsPage.if-you-havent-read-or-written-code-before-dont-worry-just-try-to-read-the-above-text-like-a-formal-agreement-or-a-specific-formula-and-see-if-it-makes-some-sense')} </p>
 
               <p>
-                It's a payment splitter!
-              </p>
+                {t('AppsPage.its-a-payment-splitter')} </p>
 
               <p>
-                That means it splits payments!
-              </p>
+                {t('AppsPage.that-means-it-splits-payments')} </p>
 
               <p>
                 😑
               </p>
 
               <p>
-                ...in other words, it means whenever our Payment Splitter smart
-                contract receives ETH, it'll automatically send the right
-                proportion (1/3) to each person.
-              </p>
+                {t('AppsPage.in-other-words-it-means-whenever-our-payment-splitter-smart-contract-receives-eth-itll-automatically-send-the-right-proportion-1-3-to-each-person')} </p>
 
               <p>
-                Now, we can use this simple program to send money to everyone at
-                once, instead of individually sending everyone ETH one at a
-                time.
-              </p>
+                {t('AppsPage.now-we-can-use-this-simple-program-to-send-money-to-everyone-at-once-instead-of-individually-sending-everyone-eth-one-at-a-time')} </p>
 
               <p>
-                How do we run this program?
-              </p>
+                {t('AppsPage.how-do-we-run-this-program')} </p>
 
               <p>
-                On Ethereum, all smart contracts have their own address. To run
-                this program, we just send ETH to its address. So it's a transaction, just like how sending ETH to Alice, Bob, or Carol is also a transaction.
-              </p>
+                {t('AppsPage.on-ethereum-all-smart-contracts-have-their-own-address-to-run-this-program-we-just-send-eth-to-its-address-so-its-a-transaction-just-like-how-sending-eth-to-alice-bob-or-carol-is-also-a-transaction')} </p>
 
               <p>
-                Once the program receives ETH, it'll automatically do its job and split the
-                funds three ways between Alice, Bob, and Carol as part of the same
-                transaction.
-              </p>
+                {t('AppsPage.once-the-program-receives-eth-itll-automatically-do-its-job-and-split-the-funds-three-ways-between-alice-bob-and-carol-as-part-of-the-same-transaction')} </p>
 
               {/* Split Animation */}
               <div className="my-12">
@@ -168,8 +139,7 @@ END`}
               </div>
 
               <p>
-                Here, give it a try yourself.
-              </p>
+                {t('AppsPage.here-give-it-a-try-yourself')} </p>
 
               {/* Balance Component with Splitter */}
               <div className="my-12">
@@ -188,33 +158,21 @@ END`}
               </div>
 
               <p>
-                Because the split amounts are coded up, it's also very easy to
-                change them.
-              </p>
+                {t('AppsPage.because-the-split-amounts-are-coded-up-its-also-very-easy-to-change-them')} </p>
 
               <p>
-                Let's say that Alice, Bob, and Carol all baked cookies for a
-                bake sale.
-              </p>
+                {t('AppsPage.lets-say-that-alice-bob-and-carol-all-baked-cookies-for-a-bake-sale')} </p>
 
               <p>
-                Alice has baked half of all the cookies, and Bob and
-                Carol each baked a quarter. Let's say they take sales in ETH so
-                they tell everyone to send them money to a Payment Splitter
-                smart contract.
-              </p>
+                {t('AppsPage.alice-has-baked-half-of-all-the-cookies-and-bob-and-carol-each-baked-a-quarter-lets-say-they-take-sales-in-eth-so-they-tell-everyone-to-send-them-money-to-a-payment-splitter-smart-contract')} </p>
 
               {/* COOKIE DIAGRAM */}
 
               <p>
-                How can we change the Payment Splitter program to instead send
-                50% to Alice, 25% to Bob, and 25% to Carol?
-              </p>
+                {t('AppsPage.how-can-we-change-the-payment-splitter-program-to-instead-send-50-to-alice-25-to-bob-and-25-to-carol')} </p>
 
               <p>
-                All we need to do is change the percentages we had for each
-                person in our smart contract!
-              </p>
+                {t('AppsPage.all-we-need-to-do-is-change-the-percentages-we-had-for-each-person-in-our-smart-contract')} </p>
 
               {/* Payment Splitter Code Block with Animation */}
               <div className="my-12">
@@ -232,15 +190,10 @@ END`}
               </div>
 
               <p>
-                We change the 33% for Alice to 50%, and the 33% for Bob and Carol
-                to 25%.
-              </p>
+                {t('AppsPage.we-change-the-33-for-alice-to-50-and-the-33-for-bob-and-carol-to-25')} </p>
 
               <p>
-                Now, when we send ETH to this new Payment Splitter, it
-                automatically splits the funds 50/25/25 between Alice, Bob, and
-                Carol.
-              </p>
+                {t('AppsPage.now-when-we-send-eth-to-this-new-payment-splitter-it-automatically-splits-the-funds-50-25-25-between-alice-bob-and-carol')} </p>
 
               {/* Split Animation with 50/25/25 split */}
               <div className="my-12">
@@ -256,13 +209,10 @@ END`}
             {/* Additional Smart Contract Capabilities */}
             <section className="mb-16">
               <p>
-                This is just the tip of the iceberg. There are many other types
-                of smart contracts we could write to handle even more complex types of payments.
-              </p>
+                {t('AppsPage.this-is-just-the-tip-of-the-iceberg-there-are-many-other-types-of-smart-contracts-we-could-write-to-handle-even-more-complex-types-of-payments')} </p>
 
               <p>
-                For example, we could have:
-              </p>
+                {t('AppsPage.for-example-we-could-have')} </p>
 
               {/* Smart Contract Capabilities List */}
               <div className="text-gray-300 leading-relaxed mb-6">
@@ -271,13 +221,12 @@ END`}
                   <div className="flex items-start">
                     <span className="inline-block w-2 h-2 bg-gray-400 rounded-full mt-3 mr-3 flex-shrink-0"></span>
                     <div className="flex-1 text">
-                      <span className="text-blue-300">Variable Split:</span> Change
-                      the split proportions (we already saw this one)
+                      <span className="text-blue-300">{t('AppsPage.variable-split')}:</span> {t('AppsPage.change-the-split-proportions-we-already-saw-this-one')}
                     </div>
                   </div>
                   {/* Mobile-only quadrant */}
                   <div className="mt-4 md:hidden">
-                    <AppsAbstractQuadrant quadrantType="Variable Split" />
+                    <AppsAbstractQuadrant quadrantType={t('AppsPage.variable-split')} />
                   </div>
                 </div>
 
@@ -286,14 +235,12 @@ END`}
                   <div className="flex items-start">
                     <span className="inline-block w-2 h-2 bg-gray-400 rounded-full mt-3 mr-3 flex-shrink-0"></span>
                     <div className="flex-1 text">
-                      <span className="text-green-300">Dynamic Recipients:</span>{" "}
-                      Add or remove recipients (e.g. remove 👩‍🦰 Carol, or we could
-                      add 🕵️‍♀️ Eve)
-                    </div>
+                      <span className="text-green-300">{t('AppsPage.dynamic-recipients')}:</span>{" "}
+                      {t('AppsPage.add-or-remove-recipients-e-g-remove-carol-or-we-could-add-eve')} </div>
                   </div>
                   {/* Mobile-only quadrant */}
                   <div className="mt-4 md:hidden">
-                    <AppsAbstractQuadrant quadrantType="Dynamic Recipients" />
+                    <AppsAbstractQuadrant quadrantType={t('AppsPage.dynamic-recipients')} />
                   </div>
                 </div>
 
@@ -302,14 +249,11 @@ END`}
                   <div className="flex items-start">
                     <span className="inline-block w-2 h-2 bg-gray-400 rounded-full mt-3 mr-3 flex-shrink-0"></span>
                     <div className="flex-1 text">
-                      <span className="text-yellow-300">Fee Flow:</span> Charge a
-                      processing fee (e.g. send 1% to ourselves, then pass the rest
-                      along)
-                    </div>
+                      <span className="text-yellow-300">{t('AppsPage.fee-flow')}:</span> {t('AppsPage.charge-a-processing-fee-e-g-send-1-to-ourselves-then-pass-the-rest-along')} </div>
                   </div>
                   {/* Mobile-only quadrant */}
                   <div className="mt-4 md:hidden">
-                    <AppsAbstractQuadrant quadrantType="Fee Flow" />
+                    <AppsAbstractQuadrant quadrantType={t('AppsPage.fee-flow')} />
                   </div>
                 </div>
 
@@ -318,14 +262,12 @@ END`}
                   <div className="flex items-start">
                     <span className="inline-block w-2 h-2 bg-gray-400 rounded-full mt-3 mr-3 flex-shrink-0"></span>
                     <div className="flex-1 text">
-                      <span className="text-purple-300">Betting:</span> Take in
-                      money from 2 people, and pay it out to 1 person (e.g. to
-                      settle a bet)
+                      <span className="text-purple-300">{t('AppsPage.betting')}:</span> {t('AppsPage.take-in-money-from-2-people-and-pay-it-out-to-1-person-e-g-to-settle-a-bet')}
                     </div>
                   </div>
                   {/* Mobile-only quadrant */}
                   <div className="mt-4 md:hidden">
-                    <AppsAbstractQuadrant quadrantType="Betting" />
+                    <AppsAbstractQuadrant quadrantType={t('AppsPage.betting')} />
                   </div>
                 </div>
               </div>
@@ -336,37 +278,26 @@ END`}
               </div>
 
               <p>
-                All of this can let us make very flexible and customizable
-                programs to handle payments.
-              </p>
+                {t('AppsPage.all-of-this-can-let-us-make-very-flexible-and-customizable-programs-to-handle-payments')} </p>
 
               <p>
-                Let's go back to the bake sale example for a second. In an
-                ideal world, we can sell cookies to people for ETH.
-              </p>
+                {t('AppsPage.lets-go-back-to-the-bake-sale-example-for-a-second-in-an-ideal-world-we-can-sell-cookies-to-people-for-eth')} </p>
 
               <p>
-                In the real world, however, most people won't own ETH. They
-                may not even know how to buy it. But almost everyone will have
-                US Dollars in some shape or form (cash, credit, debit, etc.)
-              </p>
+                {t('AppsPage.in-the-real-world-however-most-people-wont-own-eth-they-may-not-even-know-how-to-buy-it-but-almost-everyone-will-have-us-dollars-in-some-shape-or-form-cash-credit-debit-etc')} </p>
 
               <p>
-                Can the Ethereum network handle dollars?
-              </p>
+                {t('AppsPage.can-the-ethereum-network-handle-dollars')} </p>
 
               <p>
                 Yes!
               </p>
 
               <p>
-                As I mentioned at the very beginning, we can use all
-                sorts of currencies on the Ethereum network. Including digital
-                dollars!
-              </p>
+                {t('AppsPage.as-i-mentioned-at-the-very-beginning-we-can-use-all-sorts-of-currencies-on-the-ethereum-network-including-digital-dollars')} </p>
 
               <p>
-                Let's explore the basics of <Vocab>tokens</Vocab>...
+                {t('AppsPage.lets-explore-the-basics-of')} <Vocab>{t('AppsPage.tokens')}</Vocab>...
               </p>
             </section>
           </article>

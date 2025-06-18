@@ -623,7 +623,7 @@ const BettingContract = ({ isVisible }: AnimationComponentProps) => {
 }
 
 interface AppsAbstractQuadrantProps {
-  quadrantType?: 'Variable Split' | 'Dynamic Recipients' | 'Fee Flow' | 'Betting'
+  quadrantType?: string
 }
 
 const AppsAbstractQuadrant: React.FC<AppsAbstractQuadrantProps> = ({ quadrantType }) => {
