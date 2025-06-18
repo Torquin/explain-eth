@@ -15,7 +15,7 @@ const HomePage: React.FC = () => {
     <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-2xl font-bold mb-4">Redirecting...</h1>
-        <p>{t('HomePage.taking-you-to-the-introduction')}</p>
+        <p>{t('HomePage.34p628ac')}</p>
       </div>
     </div>
   )

@@ -45,20 +45,20 @@ const IntroPage: React.FC = () => {
           
           {/* Intro Section */}
           <section className="mb-16">
-            <h1 className="text-4xl font-bold text-white mb-8">{t('IntroPage.intro')}</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">{t('IntroPage.dmj1bi34')}</h1>
             
             <p>
-              <Trans i18nKey="IntroPage.hi-if-you-have-no-idea-what-ethereum-blockchains-and-smart-contracts-are-this-is-for-you" components={{ Vocab: <Vocab>{null}</Vocab> }} />
+              <Trans i18nKey="IntroPage.629vqpym" components={{ Vocab: <Vocab>{null}</Vocab> }} />
             </p>
 
             <p>
-              {t('IntroPage.this-is-a-series-of-articles-that-tries-to-explain-the-basics-of-blockchain-in-a-simplified-way-i-do-my-best-to-avoid-heavy-math-or-programming-jargon-but-there')} <i>{t('IntroPage.will')}</i> {t('IntroPage.be-some-new-words-and-ideas-i-try-to-use-real-world-examples-when-possible-to-help-bridge-the-gap')}
+              {t('IntroPage.3ectbee7')} <i>{t('IntroPage.63fg2863')}</i> {t('IntroPage.0e16uzby')}
             </p>
             
-            <p>{t('IntroPage.for-all-the-experts-in-the-room-just-enjoy-the-animations')}</p>
+            <p>{t('IntroPage.622va93a')}</p>
             
             <p className="mb-4">
-              {t('IntroPage.along-the-way-well-cover-how-blockchains')} </p>
+              {t('IntroPage.qah5lu5d')} </p>
 
             {/* Blockchain Capabilities List */}
             <div className="text-gray-300 leading-relaxed mb-6">
@@ -67,7 +67,7 @@ const IntroPage: React.FC = () => {
                 <div className="flex items-start">
                   <span className="inline-block w-2 h-2 bg-gray-400 rounded-full mt-3 mr-3 flex-shrink-0"></span>
                   <div className="flex-1 text">
-                    <span className="text-blue-300">{t('IntroPage.let-us-send-and-receive-money-24-7')}</span>
+                    <span className="text-blue-300">{t('IntroPage.fryusi0v')}</span>
                   </div>
                 </div>
                 {/* Mobile-only quadrant */}
@@ -81,7 +81,7 @@ const IntroPage: React.FC = () => {
                 <div className="flex items-start">
                   <span className="inline-block w-2 h-2 bg-gray-400 rounded-full mt-3 mr-3 flex-shrink-0"></span>
                   <div className="flex-1 text">
-                    <span className="text-green-300">{t('IntroPage.automatically-split-bills')}</span>
+                    <span className="text-green-300">{t('IntroPage.68a6o4py')}</span>
                   </div>
                 </div>
                 {/* Mobile-only quadrant */}
@@ -95,7 +95,7 @@ const IntroPage: React.FC = () => {
                 <div className="flex items-start">
                   <span className="inline-block w-2 h-2 bg-gray-400 rounded-full mt-3 mr-3 flex-shrink-0"></span>
                   <div className="flex-1 text">
-                    <span className="text-yellow-300">{t('IntroPage.earn-interest-on-our-dollars')}</span>
+                    <span className="text-yellow-300">{t('IntroPage.na6cko0p')}</span>
                   </div>
                 </div>
                 {/* Mobile-only quadrant */}
@@ -109,7 +109,7 @@ const IntroPage: React.FC = () => {
                 <div className="flex items-start">
                   <span className="inline-block w-2 h-2 bg-gray-400 rounded-full mt-3 mr-3 flex-shrink-0"></span>
                   <div className="flex-1 text">
-                    <span className="text-purple-300">{t('IntroPage.unlock-new-types-of-apps')}</span>
+                    <span className="text-purple-300">{t('IntroPage.osoxx3ke')}</span>
                   </div>
                 </div>
                 {/* Mobile-only quadrant */}
@@ -120,7 +120,7 @@ const IntroPage: React.FC = () => {
             </div>
 
             <p>
-              {t('IntroPage.and-more')} </p>
+              {t('IntroPage.4k0v77ww')} </p>
 
             {/* Desktop-only Abstract Quadrant Animation */}
             <div className="mb-12 hidden md:block">
@@ -134,17 +134,17 @@ const IntroPage: React.FC = () => {
             <h1 className="text-4xl font-bold text-white mb-8">{t('IntroPage.ethereum')}</h1>
             
             <p>
-              {t('IntroPage.lets-get-started')} </p>
+              {t('IntroPage.3cbosdjj')} </p>
               
             <p>
-              {t('IntroPage.what-is-ethereum-ethereum-is-a')} <Vocab>{t('IntroPage.blockchain-network')}</Vocab> {t('IntroPage.for')} <Vocab>{t('IntroPage.sending-money')}</Vocab> {t('IntroPage.and')} <Vocab>{t('IntroPage.running-apps')}</Vocab>.
+              {t('IntroPage.doshlf6s')} <Vocab>{t('IntroPage.8qym8tmi')}</Vocab> {t('IntroPage.jkfe1ah6')} <Vocab>{t('IntroPage.yoacl8p5')}</Vocab> {t('IntroPage.njlvhki5')} <Vocab>{t('IntroPage.k11uu4kt')}</Vocab>.
             </p>
 
             <p>
-              {t('IntroPage.what-does-that-mean')} </p>
+              {t('IntroPage.4tcggelw')} </p>
 
             <p>
-              {t('IntroPage.in-general-a')} <Vocab>{t('IntroPage.network')}</Vocab> {t('IntroPage.is-a-group-of-connected-things-like-a-social-network-as-long-as-something-is-in-the-network-you-can-reach-it-just-like-how-on-the-facebook-network-you-can-send-a-message-to-anyone-as-long-as-they-have-an-account')}
+              {t('IntroPage.f840xv5l')} <Vocab>{t('IntroPage.iof86e8b')}</Vocab> {t('IntroPage.kbev1uuc')}
             </p>
             
             {/* Network Animation */}
@@ -153,15 +153,15 @@ const IntroPage: React.FC = () => {
             </div>
 
             <p>
-              ({t('IntroPage.i-know-we-didnt-define')} <Vocab>{t('IntroPage.blockchain')}</Vocab> {t('IntroPage.yet-dont-worry-well-get-to-it')})
+              ({t('IntroPage.ikdtibbf')} <Vocab>{t('IntroPage.vtvaxxaz')}</Vocab> {t('IntroPage.1mleqgzc')})
             </p>
 
             <p className="mb-8">
-              {t('IntroPage.like-a-social-media-network-youll-need-an')} <Vocab>{t('IntroPage.account')}</Vocab> {t('IntroPage.to-get-started-using-ethereum-an-account-will-let-you-receive')} <Vocab>{t('IntroPage.money')}</Vocab>. {t('IntroPage.you-can-receive-many-types-of-digital-assets-with-your-account')}
+              {t('IntroPage.a9hclw7n')} <Vocab>{t('IntroPage.xxz69y3j')}</Vocab> {t('IntroPage.phjfzj0c')} <Vocab>{t('IntroPage.0d57fxhp')}</Vocab>. {t('IntroPage.hbt9r0z3')}
             </p>
 
             <p className="mb-8">
-              {t('IntroPage.lets-give-you-a-test-account-to-get-started')} </p>
+              {t('IntroPage.9t1nke57')} </p>
 
             {/* Balance Component - Account Only */}
             <div className="my-12">
@@ -169,11 +169,11 @@ const IntroPage: React.FC = () => {
             </div>
             
             <p className="mb-8">
-              {t('IntroPage.every-account-has-a-unique-id-called-an')} <Vocab>{t('IntroPage.address')}</Vocab>. {t('IntroPage.your-simulated-address-is')} <code className="bg-gray-800 px-2 py-1 rounded text-sm break-all">0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2</code>. {t('IntroPage.just-like-how-an-email-address-lets-you-receive-emails-on-the-internet-your-ethereum-address-lets-you-receive-eth-on-the-ethereum-network')}
+              {t('IntroPage.ua9t9jjq')} <Vocab>{t('IntroPage.okbiiasv')}</Vocab>. {t('IntroPage.cjvqipry')} <code className="bg-gray-800 px-2 py-1 rounded text-sm break-all">0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2</code>. {t('IntroPage.x9so2of4')}
             </p>
 
             <p className="mb-8">
-              {t('IntroPage.what-is-eth-eth-is-the-native-currency-of-the-ethereum-network-like-bitcoin-its-another-digital-currency-that-you-can-trade-or-transfer')} </p>
+              {t('IntroPage.b20b6d5j')} </p>
 
             {/* ETH Showcase */}
             <div className="my-12">
@@ -181,7 +181,7 @@ const IntroPage: React.FC = () => {
             </div>
 
             <p className="mb-8">
-               {t('IntroPage.here-lets-give-you-1-simulated-eth-to-get-started-below')} </p>
+               {t('IntroPage.kko6aqms')} </p>
 
             {/* Balance Component */}
             <div className="my-12">
@@ -189,13 +189,13 @@ const IntroPage: React.FC = () => {
             </div>
 
             <p className="mb-8">
-              {t('IntroPage.now-that-you-have-some-eth-you-can-send-it-around-to-other-people')} </p>
+              {t('IntroPage.0cg0yr72')} </p>
 
             <p className="mb-8">
-              {t('IntroPage.lets-give-you-some-simulated-friends-to-send-money-to')} </p>
+              {t('IntroPage.86yfogoc')} </p>
 
             <p className="mb-8">
-              {t('IntroPage.meet-alice-bob-and-carol')} </p>
+              {t('IntroPage.xix7k66k')} </p>
 
             {/* Profile Cards */}
             <div className="my-12">
@@ -203,7 +203,7 @@ const IntroPage: React.FC = () => {
             </div>
 
             <p className="mb-8">
-              {t('IntroPage.now-try-sending-them-some-eth')} </p>
+              {t('IntroPage.yn7s495v')} </p>
 
             {/* Balance Component with Send */}
             <div className="my-12">
@@ -215,7 +215,7 @@ const IntroPage: React.FC = () => {
             </div>
 
             <p className="mb-8">
-              {t('IntroPage.so-far-you-have-sent')} {totalAmountSent.toFixed(4)} ETH. {t('IntroPage.nice-after-sending-eth-we-get-the-pop-up-below-what-does-it-mean')}
+              {t('IntroPage.o5zdf2qa')} {totalAmountSent.toFixed(4)} ETH. {t('IntroPage.sk87b2kb')}
             </p>
 
             {/* Dummy Transaction Modal */}
@@ -224,33 +224,33 @@ const IntroPage: React.FC = () => {
             </div>
 
             <p className="mb-8">
-              {t('IntroPage.once-it-turns-green-your-send-transaction-has-been')} <Vocab>{t('IntroPage.confirmed')}</Vocab>. {t('IntroPage.this-lets-you-know-that-it-was-successful-i-e-that-it-went-through')}
+              {t('IntroPage.cg6aycpv')} <Vocab>{t('IntroPage.dl5x4yw7')}</Vocab>. {t('IntroPage.9xfk19ib')}
             </p>
 
             <p>
-              {t('IntroPage.sending-money-on-ethereum-isnt-instant-its-faster-than-a-bank-transfer-no-need-to-wait-1-2-business-days-but-its-also-a-little-slower-than-venmo-or-zelle')} </p>
+              {t('IntroPage.40aeb9sj')} </p>
 
             <p>
-              {t('IntroPage.specifically-on-ethereum-it-takes')} <Vocab>{t('IntroPage.up-to-12-seconds')}</Vocab> {t('IntroPage.to-complete-a-transaction')}
+              {t('IntroPage.fr0x2iz1')} <Vocab>{t('IntroPage.el7fx27n')}</Vocab> {t('IntroPage.j96pz3tg')}
             </p>
 
             <p>
-              {t('IntroPage.does-this-mean-we-can-only-take-one-action-on-ethereum-every-12-seconds-if-so-that-would-be-inconvenient')} </p>
+              {t('IntroPage.tdx91hk9')} </p>
 
             <p>
-              {t('IntroPage.what-if-we-have-to-send-money-to-multiple-people-do-we-need-to-send-first-to-alice-wait-12-seconds-then-send-to-bob-wait-and-so-on')} </p>
+              {t('IntroPage.ljkxis6h')} </p>
 
             <p>
-              {t('IntroPage.thankfully-not-quite')} </p>
+              {t('IntroPage.y27o4xz1')} </p>
 
             <p>
-              {t('IntroPage.on-ethereum-we-can-send-out-multiple-transactions-to-different-accounts-then-in-around-12-seconds-theyll-all-happen-one-after-another-in-quick-succession')} </p>
+              {t('IntroPage.c9q8j8vo')} </p>
 
             <p>
-              {t('IntroPage.how-does-that-work-heres-an-example')} </p>
+              {t('IntroPage.8nvl76pp')} </p>
 
             <p className="mb-8">
-              {t('IntroPage.imagine-that-were-at-a-train-station-and-we-want-to-deliver-some-packages-to-the-next-stop-if-we-have-multiple-packages-to-deliver-we-can-still-put-them-all-on-the-same-train-and-theyll-all-get-delivered-together-at-the-next-stop')} </p>
+              {t('IntroPage.x3uk9e0n')} </p>
 
             {/* Train Animation */}
             <div className="my-12">
@@ -258,36 +258,36 @@ const IntroPage: React.FC = () => {
             </div>
 
             <p>
-              {t('IntroPage.of-course-instead-of-packages-were-sending-eth-and-instead-of-waiting-for-the-next-train-were-waiting-at-most-12-seconds-for-our-transactions-to-go-through')} </p>
+              {t('IntroPage.2ou2i1u3')} </p>
 
             <p>
-              {t('IntroPage.but-why-does-it-take-12-seconds-at-all-why-isnt-it-instant')} </p>
+              {t('IntroPage.0im508u0')} </p>
 
             <p>
-              {t('IntroPage.its-because-of-something-called')} <Vocab>{t('IntroPage.block-time')}</Vocab>{t('IntroPage.on-ethereum-it-takes-about-12-seconds-for-the-network-to-create-a')} <Vocab>{t('IntroPage.block')}</Vocab>.
+              {t('IntroPage.jbenm6yx')} <Vocab>{t('IntroPage.vexe6bwm')}</Vocab>{t('IntroPage.ayrtvez3')} <Vocab>{t('IntroPage.6rdivjgn')}</Vocab>.
               <FootnoteRef id="speedup">
-                  {t('IntroPage.on-average-its-probably-closer-to-6-seconds-so-the-animations-you-see-are-actually-running-at-2x-speed-but-dont-worry-about-this-too-much')} </FootnoteRef>{t('IntroPage.this-block-is-what-makes-up-the-word-blockchain')}
+                  {t('IntroPage.4cud51dx')} </FootnoteRef>{t('IntroPage.0s9v6pnb')}
             </p>
 
             <p
               className="mb-8"
-              dangerouslySetInnerHTML={{ __html: t('IntroPage.but-what-is-a-block') }}
+              dangerouslySetInnerHTML={{ __html: t('IntroPage.68rl05je') }}
             />
 
             <p className="mb-8">
-              {t('IntroPage.think-of-a-block-like-a-train-in-the-animation-above-the-train-arrives-on-schedule-picks-up-everyones-transactions-then-leaves-for-its-destination')} <FootnoteRef id="tx-city">
+              {t('IntroPage.hs9vdihr')} <FootnoteRef id="tx-city">
                 <a href="https://txcity.io/v/eth-btc" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">
-                  {t('IntroPage.here')} </a> {t('IntroPage.is-an-actual-real-time-visualization-for-the-ethereum-network-if-you-are-curious')}
+                  {t('IntroPage.oqgn0fxr')} </a> {t('IntroPage.oq8ddkdm')}
               </FootnoteRef>
             </p>
 
             <p
               className="mb-8"
-              dangerouslySetInnerHTML={{ __html: t('IntroPage.lets-say-that-you-have-to-pay-alice-bob-and-carol-all-of-them-maybe-they-each-took-you-out-to-dinner-last-week') }}
+              dangerouslySetInnerHTML={{ __html: t('IntroPage.3245z5hn') }}
             />
 
             <p className="mb-8">
-              {t('IntroPage.try-sending-each-of-them-eth-the-send-button-will-automatically-load-the-next-recipient')} </p>
+              {t('IntroPage.k02oslhh')} </p>
 
             {/* Balance Component with Auto-Cycling Recipients */}
             <div className="my-12">
@@ -303,7 +303,7 @@ const IntroPage: React.FC = () => {
             </div>
 
             <p className="mb-8">
-              {t('IntroPage.when-we-send-out-all-these-different-transactions-they-get-collected-into-a')} <Vocab>{t('IntroPage.block')}</Vocab>. {t('IntroPage.so-a-block-is-a-list-of-all-the-transactions-that-have-happened-and-a-new-block-gets-published-around-every-12-seconds')}
+              {t('IntroPage.eta03hnt')} <Vocab>{t('IntroPage.6rdivjgn')}</Vocab>. {t('IntroPage.i9htrcas')}
             </p>
 
             {/* Block Animation */}
@@ -312,7 +312,7 @@ const IntroPage: React.FC = () => {
             </div>
 
             <p>
-              {t('IntroPage.once-we-have-more-than-one-block-we-have-a')} <Vocab>{t('IntroPage.blockchain')}</Vocab>. {t('IntroPage.as-the-name-suggests-its-a-chain-of-blocks-or-an-ordered-list-of-transactions')}
+              {t('IntroPage.1z1itoyu')} <Vocab>{t('IntroPage.vtvaxxaz')}</Vocab>. {t('IntroPage.f8js7i00')}
             </p>
 
             {/* Static Blockchain Component */}
@@ -321,17 +321,17 @@ const IntroPage: React.FC = () => {
             </div>
 
             <p>
-              {t('IntroPage.but-what-other-types-of-transactions-are-there-so-far-weve-only-seen-sending-and-receiving-eth')} </p>
+              {t('IntroPage.vdukoicn')} </p>
 
             <p>
-              {t('IntroPage.in-addition-to-sending-eth-around-we-can-also-interact-with')} <Vocab>{t('IntroPage.apps')}</Vocab> {t('IntroPage.on-the-ethereum-network-these-interactions-are-also-transactions')}
+              {t('IntroPage.576s4xi9')} <Vocab>{t('IntroPage.h6tb1fbs')}</Vocab> {t('IntroPage.mk0cc3u9')}
             </p>
 
             <p>
-              {t('IntroPage.what-does-that-mean-what-does-an-app-look-like')} </p>
+              {t('IntroPage.q024c9yz')} </p>
 
             <p>
-              {t('IntroPage.lets-explore-the-basics-of')} <Vocab>{t('IntroPage.apps')}</Vocab>...
+              {t('IntroPage.0zof6d2k')} <Vocab>{t('IntroPage.h6tb1fbs')}</Vocab>...
             </p>
 
           </section>

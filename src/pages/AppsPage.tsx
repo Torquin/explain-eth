@@ -37,53 +37,53 @@ const AppsPage: React.FC = () => {
           <article className="prose prose-invert prose-lg max-w-none">
             {/* Apps Section */}
             <section className="mb-16">
-              <h1 className="text-4xl font-bold text-white mb-8">{t('AppsPage.apps')}</h1>
+              <h1 className="text-4xl font-bold text-white mb-8">{t('AppsPage.co2qiguz')}</h1>
 
               <p>
-                {t('AppsPage.an-app-on-ethereum-is-a-program-that-can-also-send-or-receive-eth')} <Vocab>{t('AppsPage.according-to-its-own-rules')}</Vocab>.
+                {t('AppsPage.pd5vqu9g')} <Vocab>{t('AppsPage.yon0zow9')}</Vocab>.
               </p>
 
               <p>
-                {t('AppsPage.in-blockchain-jargon-this-type-of-program-is-called-a')}{" "}
-                <Vocab>{t('AppsPage.smart-contract')}</Vocab>.
+                {t('AppsPage.oxvj1gzg')}{" "}
+                <Vocab>{t('AppsPage.h2vz1qn8')}</Vocab>.
               </p>
 
               <p>
-                {t('AppsPage.what-do-these-programs-look-like')} </p>
+                {t('AppsPage.1hu6ukuz')} </p>
 
               <p>
-                {t('AppsPage.what-kinds-of-rules-can-we-set')} </p>
+                {t('AppsPage.g4or0b0l')} </p>
 
               <p>
-                {t('AppsPage.how-can-they-be-useful')} </p>
+                {t('AppsPage.tyoww1e7')} </p>
 
               <p>
                 <i>
-                  {t('AppsPage.when-will-i-stop-with-these-hackneyed-rhetorical-questions')} </i>
+                  {t('AppsPage.9mz5yoil')} </i>
               </p>
 
               <p>
-                {t('AppsPage.okay-okay-lets-get-back-to-an-example')} </p>
+                {t('AppsPage.bsu1ceau')} </p>
 
               <p>
-                {t('AppsPage.remember-that-example-earlier-where-we-had-to-pay-alice-bob')},{" "}
-                <em>and</em> {t('AppsPage.carol-one-at-a-time-sending-money-to-all-three-of-them-took-several-button-clicks')} </p>
+                {t('AppsPage.zc2jt1as')},{" "}
+                <em>and</em> {t('AppsPage.s5783l5d')} </p>
 
               <p>
-                {t('AppsPage.what-if-we-could-automate-that-to-just-one-click')} </p>
+                {t('AppsPage.yhgsubcu')} </p>
 
               <p className="mb-8">
-                {t('AppsPage.lets-look-at-a-simplified-smart-contract')}
+                {t('AppsPage.e6ztltqq')}
                 <FootnoteRef id="contract">
-                  {t('AppsPage.this-is-a-simplified-example-that-doesnt-use-real-code-of-course-to-learn-more-check-out')}{" "}
+                  {t('AppsPage.vvw8sv8l')}{" "}
                   <a
                     href="https://docs.soliditylang.org/en/v0.8.30/introduction-to-smart-contracts.html"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:text-blue-300 underline"
                   >
-                    {t('AppsPage.solidity')} </a>
-                  {t('AppsPage.a-programming-language-used-to-write-smart-contracts-on-ethereum')} </FootnoteRef>
+                    {t('AppsPage.hb7ar1bv')} </a>
+                  {t('AppsPage.h8ew1xkg')} </FootnoteRef>
                 :
               </p>
 
@@ -103,35 +103,35 @@ END`}
               </div>
 
               <p>
-                {t('AppsPage.what-does-it-do')} </p>
+                {t('AppsPage.4qgzt4j7')} </p>
 
               <p>
-                {t('AppsPage.if-you-havent-read-or-written-code-before-dont-worry-just-try-to-read-the-above-text-like-a-formal-agreement-or-a-specific-formula-and-see-if-it-makes-some-sense')} </p>
+                {t('AppsPage.g2l6yzle')} </p>
 
               <p>
-                {t('AppsPage.its-a-payment-splitter')} </p>
+                {t('AppsPage.7z1v9xez')} </p>
 
               <p>
-                {t('AppsPage.that-means-it-splits-payments')} </p>
+                {t('AppsPage.4cnpuwe3')} </p>
 
               <p>
                 😑
               </p>
 
               <p>
-                {t('AppsPage.in-other-words-it-means-whenever-our-payment-splitter-smart-contract-receives-eth-itll-automatically-send-the-right-proportion-1-3-to-each-person')} </p>
+                {t('AppsPage.8jx1igub')} </p>
 
               <p>
-                {t('AppsPage.now-we-can-use-this-simple-program-to-send-money-to-everyone-at-once-instead-of-individually-sending-everyone-eth-one-at-a-time')} </p>
+                {t('AppsPage.nyqa6lup')} </p>
 
               <p>
-                {t('AppsPage.how-do-we-run-this-program')} </p>
+                {t('AppsPage.3vq8r7vc')} </p>
 
               <p>
-                {t('AppsPage.on-ethereum-all-smart-contracts-have-their-own-address-to-run-this-program-we-just-send-eth-to-its-address-so-its-a-transaction-just-like-how-sending-eth-to-alice-bob-or-carol-is-also-a-transaction')} </p>
+                {t('AppsPage.b41xd9y3')} </p>
 
               <p>
-                {t('AppsPage.once-the-program-receives-eth-itll-automatically-do-its-job-and-split-the-funds-three-ways-between-alice-bob-and-carol-as-part-of-the-same-transaction')} </p>
+                {t('AppsPage.pyplvmqd')} </p>
 
               {/* Split Animation */}
               <div className="my-12">
@@ -139,7 +139,7 @@ END`}
               </div>
 
               <p>
-                {t('AppsPage.here-give-it-a-try-yourself')} </p>
+                {t('AppsPage.3exvhrwg')} </p>
 
               {/* Balance Component with Splitter */}
               <div className="my-12">
@@ -158,21 +158,21 @@ END`}
               </div>
 
               <p>
-                {t('AppsPage.because-the-split-amounts-are-coded-up-its-also-very-easy-to-change-them')} </p>
+                {t('AppsPage.fd2xeybr')} </p>
 
               <p>
-                {t('AppsPage.lets-say-that-alice-bob-and-carol-all-baked-cookies-for-a-bake-sale')} </p>
+                {t('AppsPage.0exy4wpo')} </p>
 
               <p>
-                {t('AppsPage.alice-has-baked-half-of-all-the-cookies-and-bob-and-carol-each-baked-a-quarter-lets-say-they-take-sales-in-eth-so-they-tell-everyone-to-send-them-money-to-a-payment-splitter-smart-contract')} </p>
+                {t('AppsPage.9clig77r')} </p>
 
               {/* COOKIE DIAGRAM */}
 
               <p>
-                {t('AppsPage.how-can-we-change-the-payment-splitter-program-to-instead-send-50-to-alice-25-to-bob-and-25-to-carol')} </p>
+                {t('AppsPage.n1e2bkp4')} </p>
 
               <p>
-                {t('AppsPage.all-we-need-to-do-is-change-the-percentages-we-had-for-each-person-in-our-smart-contract')} </p>
+                {t('AppsPage.4jc9wthr')} </p>
 
               {/* Payment Splitter Code Block with Animation */}
               <div className="my-12">
@@ -190,10 +190,10 @@ END`}
               </div>
 
               <p>
-                {t('AppsPage.we-change-the-33-for-alice-to-50-and-the-33-for-bob-and-carol-to-25')} </p>
+                {t('AppsPage.ir7ol0xy')} </p>
 
               <p>
-                {t('AppsPage.now-when-we-send-eth-to-this-new-payment-splitter-it-automatically-splits-the-funds-50-25-25-between-alice-bob-and-carol')} </p>
+                {t('AppsPage.cmdyl7hu')} </p>
 
               {/* Split Animation with 50/25/25 split */}
               <div className="my-12">
@@ -209,10 +209,10 @@ END`}
             {/* Additional Smart Contract Capabilities */}
             <section className="mb-16">
               <p>
-                {t('AppsPage.this-is-just-the-tip-of-the-iceberg-there-are-many-other-types-of-smart-contracts-we-could-write-to-handle-even-more-complex-types-of-payments')} </p>
+                {t('AppsPage.0pgtzvrx')} </p>
 
               <p>
-                {t('AppsPage.for-example-we-could-have')} </p>
+                {t('AppsPage.931go040')} </p>
 
               {/* Smart Contract Capabilities List */}
               <div className="text-gray-300 leading-relaxed mb-6">
@@ -221,12 +221,12 @@ END`}
                   <div className="flex items-start">
                     <span className="inline-block w-2 h-2 bg-gray-400 rounded-full mt-3 mr-3 flex-shrink-0"></span>
                     <div className="flex-1 text">
-                      <span className="text-blue-300">{t('AppsPage.variable-split')}:</span> {t('AppsPage.change-the-split-proportions-we-already-saw-this-one')}
+                      <span className="text-blue-300">{t('AppsPage.d59olyrm')}:</span> {t('AppsPage.ot12zv6y')}
                     </div>
                   </div>
                   {/* Mobile-only quadrant */}
                   <div className="mt-4 md:hidden">
-                    <AppsAbstractQuadrant quadrantType={t('AppsPage.variable-split')} />
+                    <AppsAbstractQuadrant quadrantType={t('AppsPage.d59olyrm')} />
                   </div>
                 </div>
 
@@ -235,12 +235,12 @@ END`}
                   <div className="flex items-start">
                     <span className="inline-block w-2 h-2 bg-gray-400 rounded-full mt-3 mr-3 flex-shrink-0"></span>
                     <div className="flex-1 text">
-                      <span className="text-green-300">{t('AppsPage.dynamic-recipients')}:</span>{" "}
-                      {t('AppsPage.add-or-remove-recipients-e-g-remove-carol-or-we-could-add-eve')} </div>
+                      <span className="text-green-300">{t('AppsPage.seejn4xv')}:</span>{" "}
+                      {t('AppsPage.l6cgj2fm')} </div>
                   </div>
                   {/* Mobile-only quadrant */}
                   <div className="mt-4 md:hidden">
-                    <AppsAbstractQuadrant quadrantType={t('AppsPage.dynamic-recipients')} />
+                    <AppsAbstractQuadrant quadrantType={t('AppsPage.seejn4xv')} />
                   </div>
                 </div>
 
@@ -249,11 +249,11 @@ END`}
                   <div className="flex items-start">
                     <span className="inline-block w-2 h-2 bg-gray-400 rounded-full mt-3 mr-3 flex-shrink-0"></span>
                     <div className="flex-1 text">
-                      <span className="text-yellow-300">{t('AppsPage.fee-flow')}:</span> {t('AppsPage.charge-a-processing-fee-e-g-send-1-to-ourselves-then-pass-the-rest-along')} </div>
+                      <span className="text-yellow-300">{t('AppsPage.ed3ubj14')}:</span> {t('AppsPage.t2pini1r')} </div>
                   </div>
                   {/* Mobile-only quadrant */}
                   <div className="mt-4 md:hidden">
-                    <AppsAbstractQuadrant quadrantType={t('AppsPage.fee-flow')} />
+                    <AppsAbstractQuadrant quadrantType={t('AppsPage.ed3ubj14')} />
                   </div>
                 </div>
 
@@ -262,12 +262,12 @@ END`}
                   <div className="flex items-start">
                     <span className="inline-block w-2 h-2 bg-gray-400 rounded-full mt-3 mr-3 flex-shrink-0"></span>
                     <div className="flex-1 text">
-                      <span className="text-purple-300">{t('AppsPage.betting')}:</span> {t('AppsPage.take-in-money-from-2-people-and-pay-it-out-to-1-person-e-g-to-settle-a-bet')}
+                      <span className="text-purple-300">{t('AppsPage.2lbj5kiq')}:</span> {t('AppsPage.c14l0s25')}
                     </div>
                   </div>
                   {/* Mobile-only quadrant */}
                   <div className="mt-4 md:hidden">
-                    <AppsAbstractQuadrant quadrantType={t('AppsPage.betting')} />
+                    <AppsAbstractQuadrant quadrantType={t('AppsPage.2lbj5kiq')} />
                   </div>
                 </div>
               </div>
@@ -278,26 +278,26 @@ END`}
               </div>
 
               <p>
-                {t('AppsPage.all-of-this-can-let-us-make-very-flexible-and-customizable-programs-to-handle-payments')} </p>
+                {t('AppsPage.eg46p0ga')} </p>
 
               <p>
-                {t('AppsPage.lets-go-back-to-the-bake-sale-example-for-a-second-in-an-ideal-world-we-can-sell-cookies-to-people-for-eth')} </p>
+                {t('AppsPage.iwck0ypz')} </p>
 
               <p>
-                {t('AppsPage.in-the-real-world-however-most-people-wont-own-eth-they-may-not-even-know-how-to-buy-it-but-almost-everyone-will-have-us-dollars-in-some-shape-or-form-cash-credit-debit-etc')} </p>
+                {t('AppsPage.950d1qtc')} </p>
 
               <p>
-                {t('AppsPage.can-the-ethereum-network-handle-dollars')} </p>
+                {t('AppsPage.kkmj25ub')} </p>
 
               <p>
                 Yes!
               </p>
 
               <p>
-                {t('AppsPage.as-i-mentioned-at-the-very-beginning-we-can-use-all-sorts-of-currencies-on-the-ethereum-network-including-digital-dollars')} </p>
+                {t('AppsPage.xangcnuf')} </p>
 
               <p>
-                {t('AppsPage.lets-explore-the-basics-of')} <Vocab>{t('AppsPage.tokens')}</Vocab>...
+                {t('AppsPage.os13o1p2')} <Vocab>{t('AppsPage.kw48qy5p')}</Vocab>...
               </p>
             </section>
           </article>
