@@ -108,10 +108,12 @@ const TokensPage: React.FC = () => {
             <p>
               {t('TokensPage.ctj64ccz')} </p>
 
-            <p dangerouslySetInnerHTML={{ __html: t('TokensPage.hgktl338') }}>
+            <p>
+              <Trans i18nKey="TokensPage.hgktl338" components={{ Vocab: <Vocab>{null}</Vocab> }} />
             </p>
             
-            <p dangerouslySetInnerHTML={{ __html: t('TokensPage.89ozdctc') }}>
+            <p>
+              <Trans i18nKey="TokensPage.89ozdctc" components={{ Vocab: <Vocab>{null}</Vocab> }} />
             </p>
 
             <div className="my-8">

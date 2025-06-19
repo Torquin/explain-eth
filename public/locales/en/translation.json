@@ -2,13 +2,12 @@
   "IntroPage": {
     "dmj1bi34": "Intro",
     "629vqpym": "Hi, if you have no idea what <Vocab>Ethereum</Vocab>, <Vocab>blockchains</Vocab>, and <Vocab>smart contracts</Vocab> are, this is for you!",
-    "3ectbee7": "This is a series of articles that tries to explain the basics of blockchain in a simplified way. I do my best to avoid heavy math or programming jargon, but there",
+    "3ectbee7": "This is a series of articles that tries to explain the basics of blockchain in a simplified way. I do my best to avoid heavy math or programming jargon, but there <i>will</i> be some new words and ideas. I try to use real-world examples when possible to help bridge the gap.",
     "njlvhki5": "and",
-    "0e16uzby": "be some new words and ideas. I try to use real-world examples when possible to help bridge the gap.",
     "622va93a": "(For all the experts in the room, just enjoy the animations.)",
     "qah5lu5d": "Along the way, we'll cover how blockchains:",
     "fryusi0v": "Let us send and receive money 24/7",
-    "h3ryu6yy": {
+    "quadrants": {
       "send-receive-money": "Send/Receive Money",
       "split-bills": "Split Bills",
       "earn-interest": "Earn Interest",
@@ -19,18 +18,11 @@
     "osoxx3ke": "Unlock new types of apps",
     "4k0v77ww": "And more!",
     "3cbosdjj": "Let's get started.",
-    "doshlf6s": "What is Ethereum? Ethereum is a",
-    "8qym8tmi": "blockchain network",
-    "yoacl8p5": "sending money",
-    "k11uu4kt": "running apps",
+    "6oi0pquy": "Ethereum",
+    "doshlf6s": "What is Ethereum? Ethereum is a <Vocab>blockchain network</Vocab> for <Vocab>sending money</Vocab> and <Vocab>running apps</Vocab>",
     "4tcggelw": "What does that mean?",
-    "f840xv5l": "In general, a",
-    "jkfe1ah6": "for",
-    "iof86e8b": "network",
-    "kbev1uuc": "is a group of connected things, like a social network. As long as something is in the network, you can reach it. Just like how on the Facebook network, you can send a message to anyone as long as they have an account.",
-    "ikdtibbf": "I know we didn't define",
-    "vtvaxxaz": "blockchain",
-    "1mleqgzc": "yet, don't worry, we'll get to it.",
+    "f840xv5l": "In general, a <Vocab>network</Vocab> is a group of connected things, like a social network. As long as something is in the network, you can reach it. Just like how on the Facebook network, you can send a message to anyone as long as they have an account.",
+    "ikdtibbf": "I know we didn't define <Vocab>blockchain</Vocab> yet, don't worry, we'll get to it.",
     "a9hclw7n": "Like a social media network, you'll need an",
     "phjfzj0c": "to get started using Ethereum. An account will let you receive",
     "hbt9r0z3": "You can receive many types of digital assets with your account.",
@@ -86,7 +78,7 @@
     "mk0cc3u9": "on the Ethereum network. These interactions are also transactions!",
     "q024c9yz": "What does that mean? What does an app look like?",
     "0zof6d2k": "Let's explore the basics of",
-    "63fg2863": "will"
+    "vtvaxxaz": "blockchain"
   },
   "HomePage": {
     "34p628ac": "Taking you to the introduction"

@@ -52,7 +52,7 @@ const IntroPage: React.FC = () => {
             </p>
 
             <p>
-              {t('IntroPage.3ectbee7')} <i>{t('IntroPage.63fg2863')}</i> {t('IntroPage.0e16uzby')}
+              <Trans i18nKey="IntroPage.3ectbee7" components={{ Vocab: <Vocab>{null}</Vocab> }} />
             </p>
             
             <p>{t('IntroPage.622va93a')}</p>
@@ -131,20 +131,20 @@ const IntroPage: React.FC = () => {
 
           {/* Ethereum Section */}
           <section className="mb-16">
-            <h1 className="text-4xl font-bold text-white mb-8">{t('IntroPage.ethereum')}</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">{t('IntroPage.6oi0pquy')}</h1>
             
             <p>
               {t('IntroPage.3cbosdjj')} </p>
               
             <p>
-              {t('IntroPage.doshlf6s')} <Vocab>{t('IntroPage.8qym8tmi')}</Vocab> {t('IntroPage.jkfe1ah6')} <Vocab>{t('IntroPage.yoacl8p5')}</Vocab> {t('IntroPage.njlvhki5')} <Vocab>{t('IntroPage.k11uu4kt')}</Vocab>.
+              <Trans i18nKey="IntroPage.doshlf6s" components={{ Vocab: <Vocab>{null}</Vocab> }} />.
             </p>
 
             <p>
               {t('IntroPage.4tcggelw')} </p>
 
             <p>
-              {t('IntroPage.f840xv5l')} <Vocab>{t('IntroPage.iof86e8b')}</Vocab> {t('IntroPage.kbev1uuc')}
+              <Trans i18nKey="IntroPage.f840xv5l" components={{ Vocab: <Vocab>{null}</Vocab> }} />
             </p>
             
             {/* Network Animation */}
@@ -153,7 +153,7 @@ const IntroPage: React.FC = () => {
             </div>
 
             <p>
-              ({t('IntroPage.ikdtibbf')} <Vocab>{t('IntroPage.vtvaxxaz')}</Vocab> {t('IntroPage.1mleqgzc')})
+              (<Trans i18nKey="IntroPage.ikdtibbf" components={{ Vocab: <Vocab>{null}</Vocab> }} />)
             </p>
 
             <p className="mb-8">
@@ -269,10 +269,9 @@ const IntroPage: React.FC = () => {
                   {t('IntroPage.4cud51dx')} </FootnoteRef>{t('IntroPage.0s9v6pnb')}
             </p>
 
-            <p
-              className="mb-8"
-              dangerouslySetInnerHTML={{ __html: t('IntroPage.68rl05je') }}
-            />
+            <p className="mb-8">
+              <Trans i18nKey="IntroPage.68rl05je" components={{ Vocab: <Vocab>{null}</Vocab> }} />
+            </p>
 
             <p className="mb-8">
               {t('IntroPage.hs9vdihr')} <FootnoteRef id="tx-city">
@@ -281,10 +280,9 @@ const IntroPage: React.FC = () => {
               </FootnoteRef>
             </p>
 
-            <p
-              className="mb-8"
-              dangerouslySetInnerHTML={{ __html: t('IntroPage.3245z5hn') }}
-            />
+            <p className="mb-8">
+              <Trans i18nKey="IntroPage.3245z5hn" components={{ Vocab: <Vocab>{null}</Vocab> }} />
+            </p>
 
             <p className="mb-8">
               {t('IntroPage.k02oslhh')} </p>
