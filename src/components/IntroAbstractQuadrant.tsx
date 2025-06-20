@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, ReactNode } from 'react'
 import { getRecipientEmoji, getRecipientBackgroundColor } from '../utils/recipients'
+import { useTranslation } from 'react-i18next';
 
 // Type definitions
 interface QuadrantProps {
@@ -47,16 +48,17 @@ const useIntersectionObserver = (threshold = 0.1) => {
 
 // Individual quadrant component with subtle background variations
 const Quadrant = ({ title, children }: QuadrantProps) => {
+  const { t } = useTranslation();
   // Define subtle background colors for each quadrant type
   const getQuadrantBackground = (title: string) => {
     switch (title) {
-      case 'Send/Receive Money':
+      case t('IntroPage.quadrants.send-receive-money'):
         return 'bg-blue-900/20 border-blue-700/30'
-      case 'Split Bills':
+      case t('IntroPage.quadrants.split-bills'):
         return 'bg-green-900/20 border-green-700/30'
-      case 'Earn Interest':
+      case t('IntroPage.quadrants.earn-interest'):
         return 'bg-yellow-900/20 border-yellow-700/30'
-      case 'New Apps':
+      case t('IntroPage.quadrants.new-apps'):
         return 'bg-purple-900/20 border-purple-700/30'
       default:
         return 'bg-gray-800 border-gray-700'
@@ -530,31 +532,32 @@ interface IntroAbstractQuadrantProps {
 
 const IntroAbstractQuadrant: React.FC<IntroAbstractQuadrantProps> = ({ quadrantType }) => {
   const { ref, isVisible } = useIntersectionObserver(0.1)
+  const { t } = useTranslation();
 
   // Helper function to render individual quadrant
   const renderQuadrant = (title: string) => {
     switch (title) {
-      case 'Send/Receive Money':
+      case t('IntroPage.quadrants.send-receive-money'):
         return (
-          <Quadrant title="Send/Receive Money">
+          <Quadrant title={t('IntroPage.quadrants.send-receive-money')}>
             <SendReceiveMoney isVisible={isVisible} />
           </Quadrant>
         )
-      case 'Split Bills':
+      case t('IntroPage.quadrants.split-bills'):
         return (
-          <Quadrant title="Split Bills">
+          <Quadrant title={t('IntroPage.quadrants.split-bills')}>
             <SplitBills isVisible={isVisible} />
           </Quadrant>
         )
-      case 'Earn Interest':
+      case t('IntroPage.quadrants.earn-interest'):
         return (
-          <Quadrant title="Earn Interest">
+          <Quadrant title={t('IntroPage.quadrants.earn-interest')}>
             <EarnInterest isVisible={isVisible} />
           </Quadrant>
         )
-      case 'New Apps':
+      case t('IntroPage.quadrants.new-apps'):
         return (
-          <Quadrant title="New Apps">
+          <Quadrant title={t('IntroPage.quadrants.new-apps')}>
             <NewApps isVisible={isVisible} />
           </Quadrant>
         )

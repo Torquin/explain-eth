@@ -157,7 +157,7 @@ const IntroPage: React.FC = () => {
             </p>
 
             <p className="mb-8">
-              {t('IntroPage.a9hclw7n')} <Vocab>{t('IntroPage.xxz69y3j')}</Vocab> {t('IntroPage.phjfzj0c')} <Vocab>{t('IntroPage.0d57fxhp')}</Vocab>. {t('IntroPage.hbt9r0z3')}
+              <Trans i18nKey="IntroPage.a9hclw7n" components={{ Vocab: <Vocab>{null}</Vocab> }} />
             </p>
 
             <p className="mb-8">
@@ -169,7 +169,8 @@ const IntroPage: React.FC = () => {
             </div>
             
             <p className="mb-8">
-              {t('IntroPage.ua9t9jjq')} <Vocab>{t('IntroPage.okbiiasv')}</Vocab>. {t('IntroPage.cjvqipry')} <code className="bg-gray-800 px-2 py-1 rounded text-sm break-all">0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2</code>. {t('IntroPage.x9so2of4')}
+              <Trans i18nKey="IntroPage.ua9t9jjq" components={{ Vocab: <Vocab>{null}</Vocab> }} />
+              {t('IntroPage.cjvqipry')} <code className="bg-gray-800 px-2 py-1 rounded text-sm break-all">0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2</code>. {t('IntroPage.x9so2of4')}
             </p>
 
             <p className="mb-8">
@@ -224,14 +225,14 @@ const IntroPage: React.FC = () => {
             </div>
 
             <p className="mb-8">
-              {t('IntroPage.cg6aycpv')} <Vocab>{t('IntroPage.dl5x4yw7')}</Vocab>. {t('IntroPage.9xfk19ib')}
+              <Trans i18nKey="IntroPage.cg6aycpv" components={{ Vocab: <Vocab>{null}</Vocab> }} />
             </p>
 
             <p>
               {t('IntroPage.40aeb9sj')} </p>
 
             <p>
-              {t('IntroPage.fr0x2iz1')} <Vocab>{t('IntroPage.el7fx27n')}</Vocab> {t('IntroPage.j96pz3tg')}
+              <Trans i18nKey="IntroPage.fr0x2iz1" components={{ Vocab: <Vocab>{null}</Vocab> }} />
             </p>
 
             <p>
@@ -264,7 +265,7 @@ const IntroPage: React.FC = () => {
               {t('IntroPage.0im508u0')} </p>
 
             <p>
-              {t('IntroPage.jbenm6yx')} <Vocab>{t('IntroPage.vexe6bwm')}</Vocab>{t('IntroPage.ayrtvez3')} <Vocab>{t('IntroPage.6rdivjgn')}</Vocab>.
+              <Trans i18nKey="IntroPage.jbenm6yx" components={{ Vocab: <Vocab>{null}</Vocab> }} />
               <FootnoteRef id="speedup">
                   {t('IntroPage.4cud51dx')} </FootnoteRef>{t('IntroPage.0s9v6pnb')}
             </p>
@@ -281,7 +282,7 @@ const IntroPage: React.FC = () => {
             </p>
 
             <p className="mb-8">
-              <Trans i18nKey="IntroPage.3245z5hn" components={{ Vocab: <Vocab>{null}</Vocab> }} />
+              <Trans i18nKey="IntroPage.3245z5hn" components={{ Vocab: <Vocab>{null}</Vocab>, em: <em></em> }} />
             </p>
 
             <p className="mb-8">
@@ -301,7 +302,7 @@ const IntroPage: React.FC = () => {
             </div>
 
             <p className="mb-8">
-              {t('IntroPage.eta03hnt')} <Vocab>{t('IntroPage.6rdivjgn')}</Vocab>. {t('IntroPage.i9htrcas')}
+              <Trans i18nKey="IntroPage.eta03hnt" components={{ Vocab: <Vocab>{null}</Vocab> }} />
             </p>
 
             {/* Block Animation */}
@@ -310,7 +311,7 @@ const IntroPage: React.FC = () => {
             </div>
 
             <p>
-              {t('IntroPage.1z1itoyu')} <Vocab>{t('IntroPage.vtvaxxaz')}</Vocab>. {t('IntroPage.f8js7i00')}
+              <Trans i18nKey="IntroPage.1z1itoyu" components={{ Vocab: <Vocab>{null}</Vocab> }} />
             </p>
 
             {/* Static Blockchain Component */}
@@ -322,14 +323,14 @@ const IntroPage: React.FC = () => {
               {t('IntroPage.vdukoicn')} </p>
 
             <p>
-              {t('IntroPage.576s4xi9')} <Vocab>{t('IntroPage.h6tb1fbs')}</Vocab> {t('IntroPage.mk0cc3u9')}
+              <Trans i18nKey="IntroPage.576s4xi9" components={{ Vocab: <Vocab>{null}</Vocab> }} />
             </p>
 
             <p>
               {t('IntroPage.q024c9yz')} </p>
 
             <p>
-              {t('IntroPage.0zof6d2k')} <Vocab>{t('IntroPage.h6tb1fbs')}</Vocab>...
+              <Trans i18nKey="IntroPage.0zof6d2k" components={{ Vocab: <Vocab>{null}</Vocab> }} />
             </p>
 
           </section>
