@@ -315,6 +315,7 @@ const SplitBills = ({ isVisible }: AnimationComponentProps) => {
 
 // Bottom Left: Earn Interest - abstract growth animation similar to VolatilityComparison but upward only
 const EarnInterest = ({ isVisible }: AnimationComponentProps) => {
+  const { t } = useTranslation();
   const [progress, setProgress] = useState(0)
   const [animationKey, setAnimationKey] = useState(0)
 
@@ -365,7 +366,7 @@ const EarnInterest = ({ isVisible }: AnimationComponentProps) => {
 
   useEffect(() => {
     if (!isVisible) return
-
+    
     const duration = 4000 // 4 seconds for full animation
     const interval = 50 // Update every 50ms
 
@@ -418,7 +419,7 @@ const EarnInterest = ({ isVisible }: AnimationComponentProps) => {
       </svg>
 
       {/* Labels */}
-      <div className="absolute bottom-1 left-1 text-xs text-gray-400">Interest</div>
+      <div className="absolute bottom-1 left-1 text-xs text-gray-400">{t('IntroPage.quadrants.interest')}</div>
     </div>
   )
 }

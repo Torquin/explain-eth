@@ -11,7 +11,8 @@
       "send-receive-money": "Send/Receive Money",
       "split-bills": "Split Bills",
       "earn-interest": "Earn Interest",
-      "new-apps": "New Apps"
+      "new-apps": "New Apps",
+      "interest": "Interest"
     },
     "68a6o4py": "Automatically split bills",
     "na6cko0p": "Earn interest on our dollars",
@@ -176,7 +177,23 @@
       "g8nvaf9c": "Get ETH",
       "g8nvaf8c": "Receive 1 ETH (Click me!)",
       "i090qiw6": "Send",
-      "i090qiw7": "to"
+      "i090qiw7": "to",
+      "pkwgyt1i": "To"
+    },
+    "EthShowcase": {
+      "wvk9e1gf": "Ethereum's Native Currency"
+    },
+    "DummyTransactionModal": {
+      "01ydr982": "Transaction Pending",
+      "q3k8jtuk": "Transaction Successful",
+      "5xtzm5ok": "Sending 0.01 ETH to Alice 👩‍💼...",
+      "c49jznx9": "Sent 0.01 ETH to Alice 👩‍💼"
+    },
+    "TrainAnimation": {
+      "hr3k5h78": "Train Station",
+      "lgw9giej": "Next Stop",
+      "zle72vt9": "Loading packages onto train...",
+      "x499rt78": "Train departing!"
     }
   }
 }

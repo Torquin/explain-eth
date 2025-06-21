@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import CircularCountdown from './CircularCountdown'
+import { useTranslation } from 'react-i18next';
 
 // Animated Dummy Transaction Modal Component for illustration
 const DummyTransactionModal: React.FC = () => {
@@ -27,6 +28,7 @@ const DummyTransactionModal: React.FC = () => {
   }, [])
 
   const isPending = phase === 'pending'
+  const { t } = useTranslation();
 
   return (
     <div className={`max-w-sm mx-auto my-8 bg-gray-800 rounded-lg shadow-xl p-4 border-2 transition-all duration-300 ${
@@ -58,10 +60,10 @@ const DummyTransactionModal: React.FC = () => {
           <h3 className={`text-sm font-medium transition-all duration-300 ${
             isPending ? 'text-yellow-400' : 'text-green-400'
           }`}>
-            {isPending ? 'Transaction Pending' : 'Transaction Successful'}
+            {isPending ? t('Components.DummyTransactionModal.01ydr982') : t('Components.DummyTransactionModal.q3k8jtuk')}
           </h3>
           <div className="text-gray-300 text-sm mt-1">
-            {isPending ? 'Sending 0.01 ETH to Alice 👩‍💼...' : 'Sent 0.01 ETH to Alice 👩‍💼'}
+            {isPending ? t('Components.DummyTransactionModal.5xtzm5ok') : t('Components.DummyTransactionModal.c49jznx9')}
           </div>
         </div>
       </div>

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next';
 
 // Train Animation Component
 const TrainAnimation: React.FC = () => {
+  const { t } = useTranslation();
   const [animationPhase, setAnimationPhase] = useState<'loading' | 'moving'>('loading')
   const [cycleCount, setCycleCount] = useState(0)
   const [visibleBoxes, setVisibleBoxes] = useState<number[]>([])
@@ -92,10 +94,10 @@ const TrainAnimation: React.FC = () => {
 
         {/* Labels */}
         <div className="absolute top-2 left-4 text-white text-sm font-bold">
-          Train Station
+          {t('Components.TrainAnimation.hr3k5h78')}
         </div>
         <div className="absolute top-2 right-4 text-white text-sm font-bold">
-          Next Stop
+          {t('Components.TrainAnimation.lgw9giej')}
         </div>
 
       </div>
@@ -103,8 +105,8 @@ const TrainAnimation: React.FC = () => {
       {/* Status */}
       <div className="flex justify-center mt-4">
         <div className="text-white text-sm bg-black bg-opacity-50 px-3 py-1 rounded">
-          {animationPhase === 'loading' && 'Loading packages onto train...'}
-          {animationPhase === 'moving' && 'Train departing!'}
+          {animationPhase === 'loading' && t('Components.TrainAnimation.zle72vt9')}
+          {animationPhase === 'moving' && t('Components.TrainAnimation.x499rt78')}
         </div>
       </div>
     </div>

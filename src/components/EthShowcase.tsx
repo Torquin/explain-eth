@@ -1,6 +1,8 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 const EthShowcase: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col items-center justify-center py-8">
       {/* ETH Logo with pulse animation */}
@@ -18,7 +20,7 @@ const EthShowcase: React.FC = () => {
       {/* ETH Ticker */}
       <div className="text-center">
         <div className="text-3xl font-bold text-white mb-2">ETH</div>
-        <div className="text-lg text-gray-400">Ethereum's Native Currency</div>
+        <div className="text-lg text-gray-400">{t('Components.EthShowcase.wvk9e1gf')}</div>
       </div>
 
       {/* Inline CSS for the animation */}

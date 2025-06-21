@@ -180,7 +180,7 @@ const BalanceComponent: React.FC<BalanceComponentProps> = ({
           {showRecipientSelection ? (
             <div>
               <label className="block text-sm text-gray-400 mb-2 break-all">
-                To: {useSplitter ? 'Payment Splitter Contract' : getRecipientAddress(selectedRecipient)}
+                {t('Components.BalanceComponent.pkwgyt1i')}: {useSplitter ? 'Payment Splitter Contract' : getRecipientAddress(selectedRecipient)}
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                 {allowedRecipients.map((recipient) => {
