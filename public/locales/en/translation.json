@@ -162,5 +162,21 @@
     "197de72s": "What do they look like?",
     "slaxvdj7": "What kinds of cooler stuff can we build?",
     "pc209rik": "Let's do a deeper dive into smart contracts, now with tokens..."
+  },
+  "Components": {
+    "NetworkAnimation": {
+      "x6hvbsxv": "You",
+      "xai0ay05": "A network showing connected participants. Messages can travel between any two people through various paths."
+    },
+    "BalanceComponent": {
+      "qeyf8n8q": "Your Account",
+      "1rfaxjaz": "Available Balance",
+      "pg07xyri": "Send ETH",
+      "hpejs5nd": "Recipients: Alice, Bob, and Carol will each receive",
+      "g8nvaf9c": "Get ETH",
+      "g8nvaf8c": "Receive 1 ETH (Click me!)",
+      "i090qiw6": "Send",
+      "i090qiw7": "to"
+    }
   }
 }

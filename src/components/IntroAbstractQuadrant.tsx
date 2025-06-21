@@ -579,10 +579,10 @@ const IntroAbstractQuadrant: React.FC<IntroAbstractQuadrantProps> = ({ quadrantT
   return (
     <div ref={ref} className="w-full max-w-4xl mx-auto bg-gray-900 rounded-lg p-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {renderQuadrant('Send/Receive Money')}
-        {renderQuadrant('Split Bills')}
-        {renderQuadrant('Earn Interest')}
-        {renderQuadrant('New Apps')}
+        {renderQuadrant(t('IntroPage.quadrants.send-receive-money'))}
+        {renderQuadrant(t('IntroPage.quadrants.split-bills'))}
+        {renderQuadrant(t('IntroPage.quadrants.earn-interest'))}
+        {renderQuadrant(t('IntroPage.quadrants.new-apps'))}
       </div>
     </div>
   )

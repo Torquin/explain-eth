@@ -4,6 +4,7 @@ import { Recipient } from '../types/blockchain'
 import { formatETH, formatETHTruncated } from '../utils/transactions'
 import { getRecipientAddress, getRecipientEmoji } from '../utils/recipients'
 import FlashAnimation from './FlashAnimation'
+import { useTranslation } from 'react-i18next';
 
 interface BalanceComponentProps {
   showSendAction?: boolean
@@ -40,6 +41,7 @@ const BalanceComponent: React.FC<BalanceComponentProps> = ({
   const [componentTransactionIds, setComponentTransactionIds] = useState<Set<string>>(new Set())
   const [pendingSendFromComponent, setPendingSendFromComponent] = useState<{recipient: Recipient, amount: number, timestamp: number} | null>(null)
   const [hasInitialized, setHasInitialized] = useState(false)
+  const { t } = useTranslation();
 
   // Auto-initialize with 1 ETH if balance is zero and autoInitializeETH is true
   useEffect(() => {
@@ -151,7 +153,7 @@ const BalanceComponent: React.FC<BalanceComponentProps> = ({
   return (
     <div className={`bg-gray-800 border border-gray-700 rounded-lg p-6 ${className}`}>
 
-      <h3 className="text-lg font-semibold text-gray-100 mb-4">Your Account</h3>
+      <h3 className="text-lg font-semibold text-gray-100 mb-4">{t('Components.BalanceComponent.qeyf8n8q')}</h3>
 
       {/* User Address */}
       <div className="mb-4">
@@ -166,13 +168,13 @@ const BalanceComponent: React.FC<BalanceComponentProps> = ({
         <div className="text-3xl font-bold text-green-400 mb-2">
           {formatETH(ethereumState.balance)}
         </div>
-        <div className="text-sm text-gray-400">Available Balance</div>
+        <div className="text-sm text-gray-400">{t('Components.BalanceComponent.1rfaxjaz')}</div>
       </div>
 
       {/* Send Action */}
       {showSendAction && (
         <div className="space-y-4">
-          <h4 className="text-md font-medium text-gray-200">Send ETH</h4>
+          <h4 className="text-md font-medium text-gray-200">{t('Components.BalanceComponent.pg07xyri')}</h4>
           
           {/* Recipient Selection or Display */}
           {showRecipientSelection ? (
@@ -219,7 +221,7 @@ const BalanceComponent: React.FC<BalanceComponentProps> = ({
           ) : (
             <div>
               <label className="block text-sm text-gray-400 mb-2 break-all">
-                Recipients: Alice, Bob, and Carol will each receive {formatETHTruncated(splitterAmount / 3)}
+                {t('Components.BalanceComponent.hpejs5nd')} {formatETHTruncated(splitterAmount / 3)}
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                 {allowedRecipients.map((recipient) => {
@@ -272,8 +274,8 @@ const BalanceComponent: React.FC<BalanceComponentProps> = ({
                     `}
                   >
                     {useSplitter
-                      ? `Send ${formatETHTruncated(amount)} to Splitter`
-                      : `Send ${formatETHTruncated(amount)} to ${selectedRecipient}`
+                      ? `${t('Components.BalanceComponent.i090qiw6')} ${formatETHTruncated(amount)} ${t('Components.BalanceComponent.i090qiw7')} Splitter`
+                      : `${t('Components.BalanceComponent.i090qiw6')} ${formatETHTruncated(amount)} ${t('Components.BalanceComponent.i090qiw7')} ${selectedRecipient}`
                     }
                   </button>
                 )
@@ -285,12 +287,12 @@ const BalanceComponent: React.FC<BalanceComponentProps> = ({
 
       {showReceiveAction && (
         <div className="mt-6 pt-6 border-t border-gray-700">
-          <h4 className="text-md font-medium text-gray-200 mb-4">Get ETH</h4>
+          <h4 className="text-md font-medium text-gray-200 mb-4">{t('Components.BalanceComponent.g8nvaf9c')}</h4>
           <button
             onClick={receiveETH}
             className="w-full px-6 py-3 rounded-lg font-medium transition-all cursor-pointer bg-green-600 hover:bg-green-700 text-white animate-pulse-glow"
           >
-            Receive 1 ETH (Click me!)
+            {t('Components.BalanceComponent.g8nvaf8c')}
           </button>
         </div>
       )}

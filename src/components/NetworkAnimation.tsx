@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getRecipientEmoji } from "../utils/recipients";
+import { useTranslation } from 'react-i18next';
 
 interface Node {
   id: string;
@@ -26,6 +27,7 @@ interface AnimationState {
 }
 
 const NetworkAnimation: React.FC = () => {
+  const { t } = useTranslation();
   const [animationState, setAnimationState] = useState<AnimationState>({
     sourceNode: null,
     destinationNode: null,
@@ -41,7 +43,7 @@ const NetworkAnimation: React.FC = () => {
     {
       id: "user",
       emoji: "👤",
-      name: "You",
+      name: t('Components.NetworkAnimation.x6hvbsxv'),
       x: 50,
       y: 70,
       connections: ["alice", "bob"],
@@ -361,8 +363,7 @@ const NetworkAnimation: React.FC = () => {
         </svg>
       </div>
       <div className="text-gray-400 text-sm mt-4 max-w-md">
-        A network showing connected participants. Messages can travel between
-        any two people through various paths.
+        {t('Components.NetworkAnimation.xai0ay05')}
       </div>
     </div>
   );
