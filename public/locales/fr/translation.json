@@ -194,6 +194,24 @@
       "lgw9giej": "Prochain arrêt",
       "zle72vt9": "Chargement des paquets dans le train",
       "x499rt78": "Départ du train!"
+    },
+    "BlockAnimation": {
+      "uuzcpys1": "Bloc",
+      "6dig4nhs": "Construction de blocs",
+      "shp9d2r1": "Bloc précédent",
+      "32ormf6l": "Aucun bloc précédent",
+      "kptet49e": "Bloc en cours",
+      "mjfyn81w": "Collecte des transactions dans un bloc...",
+      "fxuvfhqb": "Bloc confirmé! Toutes les transactions ont été traitées.",
+      "h211k3rk": "Bloc ajouté à la blockchain. Début d'un nouveau bloc...",
+      "vc7veoyy": "Confirmé",
+      "he4hg1ku": "En cours",
+      "knrjdy36": "Envoyé",
+      "vy10rj5b": "à",
+      "t4mhj65f": "Case Vide"
+    },
+    "StaticBlockchain": {
+      "uuzcpys2": "Bloc"
     }
   }
 }

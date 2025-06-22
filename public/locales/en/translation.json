@@ -194,6 +194,24 @@
       "lgw9giej": "Next Stop",
       "zle72vt9": "Loading packages onto train...",
       "x499rt78": "Train departing!"
+    },
+    "BlockAnimation": {
+      "uuzcpys1": "Block",
+      "6dig4nhs": "Block Building",
+      "shp9d2r1": "Previous Block",
+      "32ormf6l": "No previous block",
+      "kptet49e": "Current Block",
+      "mjfyn81w": "Collecting transactions into block...",
+      "fxuvfhqb": "Block confirmed! All transactions processed.",
+      "h211k3rk": "Block added to blockchain. Starting new block...",
+      "vc7veoyy": "Confirmed",
+      "he4hg1ku": "Pending",
+      "knrjdy36": "Sent",
+      "vy10rj5b": "to",
+      "t4mhj65f": "Empty Slot"
+    },
+    "StaticBlockchain": {
+      "uuzcpys2": "Block"
     }
   }
 }

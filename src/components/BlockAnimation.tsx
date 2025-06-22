@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { Transaction, Recipient } from '../types/blockchain'
 import { generateTransactionId, generateTransactionFee, formatETHTruncated } from '../utils/transactions'
 import CircularCountdown from './CircularCountdown'
+import { useTranslation } from 'react-i18next';
 
 // Custom hook for intersection observer
 const useIntersectionObserver = (threshold = 0.1) => {
@@ -56,10 +57,11 @@ interface BlockSlotProps {
 }
 
 const BlockSlot: React.FC<BlockSlotProps> = ({ transaction, isEmpty, isConfirmed, slotIndex }) => {
+  const { t } = useTranslation();
   if (isEmpty) {
     return (
       <div className="h-9 sm:h-9 border-2 border-dashed border-gray-600 rounded-lg flex items-center justify-center">
-        <span className="text-gray-500 text-xs sm:text-sm">Empty Slot</span>
+        <span className="text-gray-500 text-xs sm:text-sm">{t('Components.BlockAnimation.t4mhj65f')}</span>
       </div>
     )
   }
@@ -91,7 +93,7 @@ const BlockSlot: React.FC<BlockSlotProps> = ({ transaction, isEmpty, isConfirmed
   }
 
   const getDesktopText = () => {
-    return `Sent ${formatETHTruncated(transaction.amount)} to ${transaction.recipient}`
+    return `${t('Components.BlockAnimation.knrjdy36')} ${formatETHTruncated(transaction.amount)} ${t('Components.BlockAnimation.vy10rj5b')} ${transaction.recipient}`
   }
 
   return (
@@ -185,6 +187,8 @@ const BlockContainer: React.FC<BlockContainerProps> = ({
     return null
   }
 
+  const { t } = useTranslation();
+
   return (
     <div
       className={`w-full max-w-[180px] sm:max-w-sm h-[220px] sm:h-[240px] bg-gray-800 border border-gray-700 rounded-lg p-2 sm:p-4 transition-all duration-1000 ${
@@ -194,7 +198,7 @@ const BlockContainer: React.FC<BlockContainerProps> = ({
       {/* Mobile layout - Block # on its own line */}
       <div className="sm:hidden mb-2">
         <h3 className="text-sm font-semibold text-gray-100 text-center mb-2">
-          Block #{blockNumber}
+          {t('Components.BlockAnimation.uuzcpys1')} #{blockNumber}
         </h3>
         <div className="flex items-center justify-between">
           <div className="flex items-center justify-center flex-1">
@@ -205,7 +209,7 @@ const BlockContainer: React.FC<BlockContainerProps> = ({
               ? 'bg-green-500/20 text-green-400'
               : 'bg-yellow-500/20 text-yellow-400'
           }`}>
-            {isConfirmed ? 'Confirmed' : 'Pending'}
+            {isConfirmed ? t('Components.BlockAnimation.vc7veoyy') : t('Components.BlockAnimation.he4hg1ku')}
           </span>
         </div>
       </div>
@@ -214,7 +218,7 @@ const BlockContainer: React.FC<BlockContainerProps> = ({
       <div className="hidden sm:flex items-center justify-between mb-4">
         <div className="flex items-center space-x-3">
           <h3 className="text-lg font-semibold text-gray-100">
-            Block #{blockNumber}
+            {t('Components.BlockAnimation.uuzcpys1')} #{blockNumber}
           </h3>
           {getBlockIcon()}
         </div>
@@ -223,7 +227,7 @@ const BlockContainer: React.FC<BlockContainerProps> = ({
             ? 'bg-green-500/20 text-green-400'
             : 'bg-yellow-500/20 text-yellow-400'
         }`}>
-          {isConfirmed ? 'Confirmed' : 'Pending'}
+          {isConfirmed ? t('Components.BlockAnimation.vc7veoyy') : t('Components.BlockAnimation.he4hg1ku')}
         </span>
       </div>
 
@@ -235,6 +239,7 @@ const BlockContainer: React.FC<BlockContainerProps> = ({
 }
 
 const BlockAnimation: React.FC = () => {
+  const { t } = useTranslation();
   // Intersection observer for viewport detection
   const { ref, isVisible } = useIntersectionObserver(0.1)
 
@@ -350,11 +355,11 @@ const BlockAnimation: React.FC = () => {
   const getStatusMessage = () => {
     switch (phase) {
       case 'filling':
-        return 'Collecting transactions into block...'
+        return t('Components.BlockAnimation.mjfyn81w')
       case 'confirming':
-        return 'Block confirmed! All transactions processed.'
+        return t('Components.BlockAnimation.fxuvfhqb')
       case 'moving':
-        return 'Block added to blockchain. Starting new block...'
+        return t('Components.BlockAnimation.h211k3rk')
       default:
         return ''
     }
@@ -365,14 +370,14 @@ const BlockAnimation: React.FC = () => {
       <div className="p-3 sm:p-6 pb-1">
         {/* Header */}
         <div className="text-center mb-4 sm:mb-6">
-          <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Block Building</h2>
+          <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">{t('Components.BlockAnimation.6dig4nhs')}</h2>
         </div>
 
         {/* Two-column layout for blocks - always 2 columns, but smaller on mobile */}
         <div className="grid grid-cols-2 gap-3 sm:gap-8 mb-4 sm:mb-6">
           {/* Previous Block (if exists) */}
           <div className="space-y-2 sm:space-y-4">
-            <h3 className="text-sm sm:text-lg font-semibold text-gray-200 text-center">Previous Block</h3>
+            <h3 className="text-sm sm:text-lg font-semibold text-gray-200 text-center">{t('Components.BlockAnimation.shp9d2r1')}</h3>
             <div className="flex justify-center">
               {previousBlock.length > 0 ? (
                   <BlockContainer
@@ -384,7 +389,7 @@ const BlockAnimation: React.FC = () => {
                   />
               ) : (
                 <div className="w-full max-w-[180px] sm:max-w-sm h-[220px] sm:h-[240px] bg-gray-700/50 border border-gray-600 border-dashed rounded-lg p-2 sm:p-4 flex items-center justify-center">
-                  <span className="text-gray-500 text-xs sm:text-sm text-center">No previous block</span>
+                  <span className="text-gray-500 text-xs sm:text-sm text-center">{t('Components.BlockAnimation.32ormf6l')}</span>
                 </div>
               )}
             </div>
@@ -392,7 +397,7 @@ const BlockAnimation: React.FC = () => {
 
           {/* Current Block */}
           <div className="space-y-2 sm:space-y-4">
-            <h3 className="text-sm sm:text-lg font-semibold text-gray-200 text-center">Current Block</h3>
+            <h3 className="text-sm sm:text-lg font-semibold text-gray-200 text-center">{t('Components.BlockAnimation.kptet49e')}</h3>
             <div className="flex justify-center">
               <BlockContainer
                 transactions={currentBlock}
