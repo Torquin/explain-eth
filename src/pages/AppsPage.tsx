@@ -291,7 +291,7 @@ END`}
                 {t('AppsPage.kkmj25ub')} </p>
 
               <p>
-                Yes!
+                {t('AppsPage.kw48qy51')}
               </p>
 
               <p>

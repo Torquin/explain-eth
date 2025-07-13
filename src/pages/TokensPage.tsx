@@ -37,11 +37,11 @@ const TokensPage: React.FC = () => {
             <h1 className="text-4xl font-bold text-white mb-8">{t('TokensPage.ft3itozj')}</h1>
 
             <p>
-              {t('TokensPage.6e2m7pgp')} <Vocab>{t('TokensPage.sixvtspn')}</Vocab>?
+              <Trans i18nKey="TokensPage.6e2m7pgp" components={{ Vocab: <Vocab>{null}</Vocab> }} />
             </p>
 
             <p>
-              {t('TokensPage.sixvtsp1')} <Vocab>{t('TokensPage.sixvtspn')}</Vocab> {t('TokensPage.z8d0f7sy')}
+              <Trans i18nKey="TokensPage.z8d0f7sy" components={{ Vocab: <Vocab>{null}</Vocab> }} />
             </p>
 
             <p>
