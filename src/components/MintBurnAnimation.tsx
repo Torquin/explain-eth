@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getRecipientAddress, getRecipientEmoji } from "../utils/recipients";
+import { useTranslation } from 'react-i18next';
 
 interface FloatingBadge {
   id: string;
@@ -24,6 +25,7 @@ interface AnimationState {
 }
 
 const MintBurnAnimation: React.FC = () => {
+  const { t } = useTranslation();
   const [animationCycle, setAnimationCycle] = useState(0);
   const [animationState, setAnimationState] = useState<AnimationState>({
     phase: "reset",
@@ -250,8 +252,8 @@ const MintBurnAnimation: React.FC = () => {
         {/* Left Column - Minting */}
         <div className="space-y-4">
           <div className="text-center">
-            <h3 className="text-lg font-semibold text-green-400">Minting</h3>
-            <p className="text-sm text-gray-400">Creating new tokens</p>
+            <h3 className="text-lg font-semibold text-green-400">{t('Components.MintBurnAnimation.2vg37ic3')}</h3>
+            <p className="text-sm text-gray-400">{t('Components.MintBurnAnimation.dy20su32')}</p>
           </div>
 
           {/* Minting Animation */}
@@ -277,15 +279,15 @@ const MintBurnAnimation: React.FC = () => {
                   </div>
                 </div>
                 <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-gray-300 font-medium text-xs">
-                  Bank
+                  {t('Components.MintBurnAnimation.1jkahp9q')}
                 </div>
               </div>
             </div>
 
             {/* Physical/Digital Labels */}
             <div className="absolute bottom-2 left-0 right-0 flex justify-between px-4 z-5">
-              <div className="text-xs font-sans text-blue-500">Physical</div>
-              <div className="text-xs font-mono text-green-500">Digital</div>
+              <div className="text-xs font-sans text-blue-500">{t('Components.MintBurnAnimation.7ynfnltd')}</div>
+              <div className="text-xs font-mono text-green-500">{t('Components.MintBurnAnimation.1z9armkq')}</div>
             </div>
 
             {/* Dollar Token (going into bank) */}
@@ -339,7 +341,7 @@ const MintBurnAnimation: React.FC = () => {
           >
             <div className="bg-gray-700 px-4 py-3 border-b border-gray-600">
               <h4 className="text-md font-semibold text-gray-100 text-center">
-                Alice's USDC Balance
+                {t('Components.MintBurnAnimation.uqpkqr4h')}
               </h4>
             </div>
             <div
@@ -355,7 +357,7 @@ const MintBurnAnimation: React.FC = () => {
                 <thead>
                   <tr className="bg-gray-750">
                     <th className="px-4 py-3 text-left text-sm font-medium text-gray-300 border-b border-gray-600">
-                      Address
+                      {t('Components.MintBurnAnimation.ewmloe4b')}
                     </th>
                     <th className="px-4 py-3 text-right text-sm font-medium text-gray-300 border-b border-gray-600">
                       <div className="flex items-center justify-center space-x-2">
@@ -364,7 +366,7 @@ const MintBurnAnimation: React.FC = () => {
                           alt="USDC"
                           className="w-4 h-4"
                         />
-                        <span>Balance</span>
+                        <span>{t('Components.MintBurnAnimation.7ck7o762')}</span>
                       </div>
                     </th>
                   </tr>
@@ -426,8 +428,8 @@ const MintBurnAnimation: React.FC = () => {
         {/* Right Column - Burning */}
         <div className="space-y-4">
           <div className="text-center">
-            <h3 className="text-lg font-semibold text-red-400">Burning</h3>
-            <p className="text-sm text-gray-400">Redeeming tokens</p>
+            <h3 className="text-lg font-semibold text-red-400">{t('Components.MintBurnAnimation.7qvst12w')}</h3>
+            <p className="text-sm text-gray-400">{t('Components.MintBurnAnimation.skarwgfu')}</p>
           </div>
 
           {/* Burning Animation */}
@@ -453,15 +455,15 @@ const MintBurnAnimation: React.FC = () => {
                   </div>
                 </div>
                 <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-gray-300 font-medium text-xs">
-                  Bank
+                  {t('Components.MintBurnAnimation.1jkahp9q')}
                 </div>
               </div>
             </div>
 
             {/* Physical/Digital Labels */}
             <div className="absolute bottom-2 left-0 right-0 flex justify-between px-4 z-5">
-              <div className="text-xs font-sans text-blue-500">Physical</div>
-              <div className="text-xs font-mono text-green-500">Digital</div>
+              <div className="text-xs font-sans text-blue-500">{t('Components.MintBurnAnimation.7ynfnltd')}</div>
+              <div className="text-xs font-mono text-green-500">{t('Components.MintBurnAnimation.1z9armkq')}</div>
             </div>
 
             {/* Alice (sending USDC) */}
@@ -528,7 +530,7 @@ const MintBurnAnimation: React.FC = () => {
           >
             <div className="bg-gray-700 px-4 py-3 border-b border-gray-600">
               <h4 className="text-md font-semibold text-gray-100 text-center">
-                Alice's USDC Balance
+                {t('Components.MintBurnAnimation.uqpkqr4h')}
               </h4>
             </div>
             <div
@@ -544,7 +546,7 @@ const MintBurnAnimation: React.FC = () => {
                 <thead>
                   <tr className="bg-gray-750">
                     <th className="px-4 py-3 text-left text-sm font-medium text-gray-300 border-b border-gray-600">
-                      Address
+                      {t('Components.MintBurnAnimation.ewmloe4b')}
                     </th>
                     <th className="px-4 py-3 text-right text-sm font-medium text-gray-300 border-b border-gray-600">
                       <div className="flex items-center justify-center space-x-2">
@@ -553,7 +555,7 @@ const MintBurnAnimation: React.FC = () => {
                           alt="USDC"
                           className="w-4 h-4"
                         />
-                        <span>Balance</span>
+                        <span>{t('Components.MintBurnAnimation.7ck7o762')}</span>
                       </div>
                     </th>
                   </tr>
@@ -617,8 +619,7 @@ const MintBurnAnimation: React.FC = () => {
 
       <div className="flex justify-center mt-6 mb-6">
         <div className="text-white text-sm bg-black bg-opacity-50 px-4 py-2 rounded max-w-2xl">
-          Minting creates new tokens when dollars are deposited. Burning
-          removes tokens when dollars are withdrawn.
+          {t('Components.MintBurnAnimation.skarwgf1')}
         </div>
       </div>
     </div>

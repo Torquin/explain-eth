@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 
 const TokenFlowAnimation: React.FC = () => {
+  const { t } = useTranslation();
   const [animationKey, setAnimationKey] = useState(0);
   const [visibleTokens, setVisibleTokens] = useState<number[]>([]);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -83,7 +85,7 @@ const TokenFlowAnimation: React.FC = () => {
         <div className="relative">
           {/* Account label */}
           <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-gray-300 font-medium">
-            Account
+            {t('Components.TokenFlowAnimation.1lPmngI8')}
           </div>
           {/* Wallet body */}
           <div className="w-20 h-16 bg-gradient-to-br from-gray-600 to-gray-800 rounded-lg border-2 border-gray-500 shadow-xl">

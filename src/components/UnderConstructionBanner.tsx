@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 interface UnderConstructionBannerProps {
   className?: string
@@ -7,6 +8,7 @@ interface UnderConstructionBannerProps {
 const UnderConstructionBanner: React.FC<UnderConstructionBannerProps> = ({ 
   className = '' 
 }) => {
+  const { t } = useTranslation();
   return (
     <div className={`
       bg-yellow-700 
@@ -23,11 +25,11 @@ const UnderConstructionBanner: React.FC<UnderConstructionBannerProps> = ({
       ${className}
     `}>
       <div className="flex justify-center text-2xl font-bold">
-        <h1>⚠️ Under Construction ⚠️</h1>
+        <h1>⚠️ {t('Components.UnderConstructionBanner.title')} ⚠️</h1>
       </div>
       <div>
         <p className="flex justify-center text-gray-300">
-          Writing takes time! This section is still in development.
+          {t('Components.UnderConstructionBanner.subtitle')}
         </p>
       </div>
     </div>

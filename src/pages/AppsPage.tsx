@@ -15,6 +15,7 @@ import {
 import Vocab from "../components/Vocab";
 import { getRecipientEmoji, getRecipientAddressTruncated } from "../utils/recipients";
 import { useTranslation } from 'react-i18next';
+import { Trans } from 'react-i18next';
 
 const AppsPage: React.FC = () => {
   const { t } = useTranslation();
@@ -66,8 +67,8 @@ const AppsPage: React.FC = () => {
                 {t('AppsPage.bsu1ceau')} </p>
 
               <p>
-                {t('AppsPage.zc2jt1as')},{" "}
-                <em>and</em> {t('AppsPage.s5783l5d')} </p>
+                <Trans i18nKey="AppsPage.zc2jt1as" components={{ em: <em></em> }} />
+              </p>
 
               <p>
                 {t('AppsPage.yhgsubcu')} </p>

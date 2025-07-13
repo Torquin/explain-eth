@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next';
 
 const VolatilityComparison: React.FC = () => {
+  const { t } = useTranslation();
   const [animationKey, setAnimationKey] = useState(0)
   const [ethProgress, setEthProgress] = useState(0)
   const [stablecoinProgress, setStablecoinProgress] = useState(0)
@@ -98,7 +100,7 @@ const VolatilityComparison: React.FC = () => {
   return (
     <div className="w-full max-w-4xl mx-auto bg-gray-800 rounded-lg p-6">
       <h3 className="text-2xl font-bold text-white mb-6 text-center">
-        Price Comparison
+        {t('Components.VolatilityComparison.3454oewg')}
       </h3>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -113,7 +115,7 @@ const VolatilityComparison: React.FC = () => {
             />
             <div>
               <div className="text-xl font-bold text-white">ETH</div>
-              <div className="text-sm text-gray-400">Volatile Asset</div>
+              <div className="text-sm text-gray-400">{t('Components.VolatilityComparison.b0kepk7z')}</div>
             </div>
           </div>
           
@@ -151,8 +153,8 @@ const VolatilityComparison: React.FC = () => {
           </div>
           
           <div className="text-center mt-2">
-            <div className="text-sm text-blue-300 font-medium">High Volatility</div>
-            <div className="text-xs text-gray-500">Price swings</div>
+            <div className="text-sm text-blue-300 font-medium">{t('Components.VolatilityComparison.j5fjv31t')}</div>
+            <div className="text-xs text-gray-500">{t('Components.VolatilityComparison.qh72hne4')}</div>
           </div>
         </div>
 
@@ -173,7 +175,7 @@ const VolatilityComparison: React.FC = () => {
             </div>
             <div>
               <div className="text-xl font-bold text-white">USDC/USDT</div>
-              <div className="text-sm text-gray-400">Stable Assets</div>
+              <div className="text-sm text-gray-400">{t('Components.VolatilityComparison.ypypwktl')}</div>
             </div>
           </div>
           
@@ -222,8 +224,8 @@ const VolatilityComparison: React.FC = () => {
           </div>
           
           <div className="text-center mt-2">
-            <div className="text-sm text-green-400 font-medium">Low Volatility</div>
-            <div className="text-xs text-gray-500">Price stays ~$1.00</div>
+            <div className="text-sm text-green-400 font-medium">{t('Components.VolatilityComparison.j1lgh81a')}</div>
+            <div className="text-xs text-gray-500">{t('Components.VolatilityComparison.1xxecf22')}</div>
           </div>
         </div>
         

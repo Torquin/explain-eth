@@ -41,7 +41,7 @@ const TokensPage: React.FC = () => {
             </p>
 
             <p>
-              A <Vocab>token</Vocab> {t('TokensPage.z8d0f7sy')}
+              {t('TokensPage.sixvtsp1')} <Vocab>{t('TokensPage.sixvtspn')}</Vocab> {t('TokensPage.z8d0f7sy')}
             </p>
 
             <p>

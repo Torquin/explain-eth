@@ -4,8 +4,11 @@ import TransactionModal from '../components/TransactionModal'
 import TransactionHistoryOverlay from '../components/TransactionHistoryOverlay'
 import Navigation from '../components/Navigation'
 import UnderConstructionBanner from '../components/UnderConstructionBanner'
+import { useTranslation } from 'react-i18next';
+import { Trans } from 'react-i18next';
 
 const Apps2Page: React.FC = () => {
+  const { t } = useTranslation();
   const [isHistoryOpen, setIsHistoryOpen] = useState(false)
 
   const {
@@ -26,51 +29,51 @@ const Apps2Page: React.FC = () => {
           
           {/* Apps2 Section */}
           <section className="mb-16">
-            <h1 className="text-4xl font-bold text-white mb-8">Apps (But Now With Tokens)</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">{t('Apps2Page.daabm15q')}</h1>
 
             <UnderConstructionBanner />
 
             <p>
-              With stablecoins, we can now send dollars and transact in more familar ways.
+              {t('Apps2Page.kwu9h3c3')}
             </p>
 
             <p>
-              We've already covered how smart contracts can let us write different types of apps to handle payments, split bills, share fees, etc.
+              {t('Apps2Page.vqe06pdd')}
             </p>
 
             <p>
-              What happens when we combine them?
+              {t('Apps2Page.u5g8j7qj')}
             </p>
 
             <p>
-              Here, we'll cover more varied app types like:
+              {t('Apps2Page.m0o2a5tk')}
             </p>
 
             <ol>
-              <li>Earning Yield: how to earn interest on your dollars, similar to a high-yield savings account</li>
-              <li>New Payment Methods: how we can support creators with new ways of paying</li>
-              <li>Trading Markets: how to use stablecoins to buy ETH and vice versa</li>
+              <li>{t('Apps2Page.cjtczuqk')}</li>
+              <li>{t('Apps2Page.emq6yw9l')}</li>
+              <li>{t('Apps2Page.u4njx859')}</li>
             </ol>
 
           </section>
 
           <section>
-            <h2 className="text-3xl font-bold text-white mb-8">Earning Yield</h2>
+            <h2 className="text-3xl font-bold text-white mb-8">{t('Apps2Page.9s9owvh2')}</h2>
 
             <p>
-              As mentioned earlier, stablecoin companies will hold some of money in US Treasuries. This allows them to earn interest on their deposits and then pass those earnings back on to you. 
+              {t('Apps2Page.7e44t3nr')} 
             </p>
 
             <p>
-              Thus, there are apps that let you deposit your stablecoins to earn interest, around 4-6% APR. 
+              {t('Apps2Page.c6a4neai')} 
             </p>
 
             <p>
-              You get the benefits of a savings account, and the convenience of being able to send your money around quickly 24/7.
+              {t('Apps2Page.d1w0hqfc')}
             </p>
 
             <p>
-              Another benefit is that interest on Ethereum is paid out <em>every block</em>, rather than needing to wait every month or every day. 
+              <Trans i18nKey="Apps2Page.c3ybpklc" components={{ em: <em></em> }} />
             </p>
 
           </section>

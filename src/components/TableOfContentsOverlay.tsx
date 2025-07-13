@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next';
 
 interface Page {
   path: string
@@ -18,6 +19,7 @@ const TableOfContentsOverlay: React.FC<TableOfContentsOverlayProps> = ({
   isOpen,
   onToggle
 }) => {
+  const { t } = useTranslation();
   const navigate = useNavigate()
   const location = useLocation()
 
@@ -43,7 +45,7 @@ const TableOfContentsOverlay: React.FC<TableOfContentsOverlayProps> = ({
       `}>
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-gray-700">
-          <h3 className="text-lg font-semibold text-gray-100">Table of Contents</h3>
+          <h3 className="text-lg font-semibold text-gray-100">{t('Components.TableOfContentsOverlay.title')}</h3>
           <button
             onClick={onToggle}
             className="text-gray-400 hover:text-gray-200 transition-colors cursor-pointer"

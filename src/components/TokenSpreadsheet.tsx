@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { getRecipientEmoji, getRecipientAddress } from '../utils/recipients'
 import { formatETHTruncated } from '../utils/transactions'
+import { useTranslation } from 'react-i18next';
 
 interface TokenData {
   name: string
@@ -29,6 +30,7 @@ const TokenSpreadsheet: React.FC<TokenSpreadsheetProps> = ({
   showTokens = 'both',
   caption
 }) => {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<'ETH' | 'USDC'>(showTokens === 'USDC' ? 'USDC' : 'ETH')
 
   // Animation state
@@ -130,7 +132,7 @@ const TokenSpreadsheet: React.FC<TokenSpreadsheetProps> = ({
   // User data with random balances for demonstration
   const userData: TokenData[] = [
     {
-      name: 'You',
+      name: t('Components.TokenSpreadsheet.zsn3rnrc'),
       emoji: '👤',
       address: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
       ethBalance: 2,
@@ -249,7 +251,7 @@ const TokenSpreadsheet: React.FC<TokenSpreadsheetProps> = ({
                 alt={activeTab}
                 className="w-6 h-6"
               />
-              <h3 className="text-lg font-semibold text-gray-100">{activeTab} Balances</h3>
+              <h3 className="text-lg font-semibold text-gray-100">{activeTab} {t('Components.TokenSpreadsheet.k12othom')}</h3>
             </div>
           </div>
           <div className="overflow-x-auto"
@@ -259,10 +261,10 @@ const TokenSpreadsheet: React.FC<TokenSpreadsheetProps> = ({
               <thead>
                 <tr className="bg-gray-750">
                   <th className="px-4 py-3 text-left text-sm font-medium text-gray-300 border-b border-gray-600">
-                    Address
+                    {t('Components.TokenSpreadsheet.9ga61w4o')}
                   </th>
                   <th className="px-4 py-3 text-right text-sm font-medium text-gray-300 border-b border-gray-600">
-                    Balance
+                    {t('Components.TokenSpreadsheet.9wlk9s6t')}
                   </th>
                 </tr>
               </thead>
@@ -332,7 +334,7 @@ const TokenSpreadsheet: React.FC<TokenSpreadsheetProps> = ({
                     alt={showTokens}
                     className="w-6 h-6"
                   />
-                  <h3 className="text-lg font-semibold text-gray-100">{showTokens} Balances</h3>
+                  <h3 className="text-lg font-semibold text-gray-100">{showTokens} {t('Components.TokenSpreadsheet.k12othom')}</h3>
                 </div>
               </div>
               <div className="overflow-x-auto"
@@ -342,10 +344,10 @@ const TokenSpreadsheet: React.FC<TokenSpreadsheetProps> = ({
                   <thead>
                     <tr className="bg-gray-750">
                       <th className="px-4 py-3 text-left text-sm font-medium text-gray-300 border-b border-gray-600">
-                        Address
+                        {t('Components.TokenSpreadsheet.9ga61w4o')}
                       </th>
                       <th className="px-4 py-3 text-right text-sm font-medium text-gray-300 border-b border-gray-600">
-                        Balance
+                        {t('Components.TokenSpreadsheet.9wlk9s6t')}
                       </th>
                     </tr>
                   </thead>
@@ -419,13 +421,13 @@ const TokenSpreadsheet: React.FC<TokenSpreadsheetProps> = ({
               <thead>
                 <tr className="bg-gray-750">
                   <th className="px-4 py-3 text-left text-sm font-medium text-gray-300 border-b border-gray-600">
-                    Address
+                    {t('Components.TokenSpreadsheet.9ga61w4o')}
                   </th>
                   {(showTokens === 'both' || showTokens === 'ETH') && (
                     <th className="px-4 py-3 text-right text-sm font-medium text-gray-300 border-b border-gray-600">
                       <div className="flex items-center justify-center space-x-2">
                         <img src="/img/eth.svg" alt="ETH" className="w-5 h-5" />
-                        <span>ETH Balance</span>
+                        <span>ETH {t('Components.TokenSpreadsheet.9wlk9s6t')}</span>
                       </div>
                     </th>
                   )}
@@ -433,7 +435,7 @@ const TokenSpreadsheet: React.FC<TokenSpreadsheetProps> = ({
                     <th className="px-4 py-3 text-right text-sm font-medium text-gray-300 border-b border-gray-600">
                       <div className="flex items-center justify-center space-x-2">
                         <img src="/img/usdc.svg" alt="USDC" className="w-5 h-5" />
-                        <span>USDC Balance</span>
+                        <span>USDC {t('Components.TokenSpreadsheet.9wlk9s6t')}</span>
                       </div>
                     </th>
                   )}
@@ -501,7 +503,7 @@ const TokenSpreadsheet: React.FC<TokenSpreadsheetProps> = ({
       {/* Caption */}
       <div className="flex justify-center mt-6 mb-6">
         <div className="text-white text-sm bg-black bg-opacity-50 px-4 py-2 rounded max-w-2xl">
-          {caption || "Each token maintains its own table of who owns what. Your address can hold multiple types of tokens simultaneously because it has a row in every token's table."}
+          {caption || t('Components.TokenSpreadsheet.6inqv678')}
         </div>
       </div>
     </div>

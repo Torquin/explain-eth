@@ -1,21 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import TableOfContentsOverlay from './TableOfContentsOverlay'
+import { useTranslation } from 'react-i18next';
 
 interface NavigationProps {
   className?: string
 }
 
 const Navigation: React.FC<NavigationProps> = ({ className = '' }) => {
+  const { t } = useTranslation();
   const navigate = useNavigate()
   const location = useLocation()
   const [isTocOpen, setIsTocOpen] = useState(false)
 
   const pages = [
-    { path: '/intro', title: 'Intro', label: 'Introduction' },
-    { path: '/apps', title: 'Apps Part 1', label: 'Apps' },
-    { path: '/tokens', title: 'Tokens', label: 'Tokens' },
-    { path: '/apps2', title: 'Apps Part 2', label: 'Apps 2' }
+    { path: '/intro', title: t('Components.Navigation.intro'), label: 'Introduction' },
+    { path: '/apps', title: t('Components.Navigation.apps'), label: 'Apps' },
+    { path: '/tokens', title: t('Components.Navigation.tokens'), label: 'Tokens' },
+    { path: '/apps2', title: t('Components.Navigation.apps2'), label: 'Apps 2' }
   ]
 
   const currentPageIndex = pages.findIndex(page => page.path === location.pathname)
