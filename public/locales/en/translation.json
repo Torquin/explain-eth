@@ -303,7 +303,49 @@
       "hixjyuar": "Failed"
     },
     "TransactionHistoryOverlay": {
-      
+      "0nrjthjx": "Transaction History",
+      "lt5so7n3": "Ethereum Mainnet",
+      "ebqteytk": "pending...",
+      "ox3bl2wf": "Rollup",
+      "oyp98wza": "No transactions yet",
+      "aux4d6fd": "Fee:",
+      "pwetB6dD": "Error:",
+      "pending": "pending",
+      "confirmed": "confirmed"
+    }
+  },
+  "Hooks": {
+    "useBlockchain": {
+      "pending": {
+        "send": "Sending {{amount}} to {{recipient}}...",
+        "purchase_nft": "Purchasing NFT for {{amount}}...",
+        "sell_nft": "Selling NFT for {{amount}}...",
+        "deposit_earnings": "Depositing {{amount}} to earn...",
+        "withdraw_earnings": "Withdrawing {{amount}} from earn...",
+        "claim_earnings": "Claiming {{amount}} interest...",
+        "bridge": "Bridging {{amount}} to Rollup...",
+        "default": "Processing {{type}}..."
+      },
+      "confirmed": {
+        "send": "Sent {{amount}} to {{recipient}}",
+        "purchase_nft": "Purchased NFT for {{amount}}",
+        "sell_nft": "Sold NFT for {{amount}}",
+        "deposit_earnings": "Deposited {{amount}} to earn",
+        "withdraw_earnings": "Withdrew {{amount}} from earn",
+        "claim_earnings": "Claimed {{amount}} interest",
+        "bridge": "Bridged {{amount}} to Rollup",
+        "default": "Confirmed: {{type}}"
+      },
+      "description": {
+        "send": "Sent {{amount}} to {{recipient}}",
+        "purchase_nft": "Purchased NFT for {{amount}}",
+        "sell_nft": "Sold NFT for {{amount}}",
+        "deposit_earnings": "Deposited {{amount}} to earn",
+        "withdraw_earnings": "Withdrew {{amount}} from earn",
+        "claim_earnings": "Claimed {{amount}} interest",
+        "bridge": "Bridged {{amount}} to Rollup",
+        "default": "Transaction: {{amount}}"
+      }
     }
   },
   "Characters": {

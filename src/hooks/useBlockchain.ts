@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
+import { useTranslation } from 'react-i18next';
 import {
   ChainType,
   ChainState,
@@ -58,6 +59,7 @@ const initialRollupState: ChainState = {
 }
 
 export const useBlockchain = () => {
+  const { t } = useTranslation();
   const [ethereumState, setEthereumState] = useState<ChainState>(initialEthereumState)
   const [rollupState, setRollupState] = useState<ChainState>(initialRollupState)
   const [transactionHistory, setTransactionHistory] = useState<Transaction[]>([])
@@ -103,25 +105,32 @@ export const useBlockchain = () => {
   }, [])
 
   const getPendingMessage = (transaction: Transaction): string => {
+    const amount = formatETH(transaction.amount);
     switch (transaction.type) {
       case 'send':
-        return `Sending ${formatETH(transaction.amount)} to ${transaction.recipient}...`
+        return t('Hooks.useBlockchain.pending.send', {
+          amount,
+          recipient: transaction.recipient
+        });
       case 'purchase_nft':
-        return `Purchasing NFT for ${formatETH(transaction.amount)}...`
+        return t('Hooks.useBlockchain.pending.purchase_nft', { amount });
       case 'sell_nft':
-        return `Selling NFT for ${formatETH(transaction.amount)}...`
+        return t('Hooks.useBlockchain.pending.sell_nft', { amount });
       case 'deposit_earnings':
-        return `Depositing ${formatETH(transaction.amount)} to earn...`
+        return t('Hooks.useBlockchain.pending.deposit_earnings', { amount });
       case 'withdraw_earnings':
-        return `Withdrawing ${formatETH(transaction.amount)} from earn...`
+        return t('Hooks.useBlockchain.pending.withdraw_earnings', { amount });
       case 'claim_earnings':
-        return `Claiming ${formatETH(transaction.amount)} interest...`
+        return t('Hooks.useBlockchain.pending.claim_earnings', { amount });
       case 'bridge':
-        return `Bridging ${formatETH(transaction.amount)} to Rollup...`
+        return t('Hooks.useBlockchain.pending.bridge', { amount });
       default:
-        return `Processing ${String(transaction.type).replace('_', ' ')}...`
+        return t('Hooks.useBlockchain.pending.default', {
+          type: String(transaction.type).replace('_', ' ')
+        });
     }
-  }
+  };
+
 
   const closeModal = useCallback(() => {
     setModalState(prev => ({ ...prev, isOpen: false }))
@@ -176,24 +185,13 @@ export const useBlockchain = () => {
 
       // Generate detailed confirmation message
       const getConfirmationMessage = (tx: Transaction) => {
-        switch (tx.type) {
-          case 'send':
-            return `Sent ${formatETH(tx.amount)} to ${tx.recipient}`
-          case 'purchase_nft':
-            return `Purchased NFT for ${formatETH(tx.amount)}`
-          case 'sell_nft':
-            return `Sold NFT for ${formatETH(tx.amount)}`
-          case 'deposit_earnings':
-            return `Deposited ${formatETH(tx.amount)} to earn`
-          case 'withdraw_earnings':
-            return `Withdrew ${formatETH(tx.amount)} from earn`
-          case 'claim_earnings':
-            return `Claimed ${formatETH(tx.amount)} interest`
-          case 'bridge':
-            return `Bridged ${formatETH(tx.amount)} to Rollup`
-          default:
-            return `Confirmed: ${String(tx.type).replace('_', ' ')}`
+        const variables = {
+          amount: formatETH(tx.amount),
+          recipient: tx.recipient,
+          type: tx.type.replace('_', ' ')
         }
+
+        return t(`Hooks.useBlockchain.confirmed.${tx.type}`, variables)
       }
 
       // Update modal to show confirmation and clear pending transaction

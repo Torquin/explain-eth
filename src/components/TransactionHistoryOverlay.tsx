@@ -101,24 +101,12 @@ const TransactionHistoryOverlay: React.FC<TransactionHistoryOverlayProps> = ({
   }
 
   const getTransactionDescription = (tx: Transaction) => {
-    switch (tx.type) {
-      case 'send':
-        return `Sent ${formatETH(tx.amount)} to ${tx.recipient}`
-      case 'purchase_nft':
-        return `Purchased NFT for ${formatETH(tx.amount)}`
-      case 'sell_nft':
-        return `Sold NFT for ${formatETH(tx.amount)}`
-      case 'deposit_earnings':
-        return `Deposited ${formatETH(tx.amount)} to earn`
-      case 'withdraw_earnings':
-        return `Withdrew ${formatETH(tx.amount)} from earn`
-      case 'claim_earnings':
-        return `Claimed ${formatETH(tx.amount)} interest`
-      case 'bridge':
-        return `Bridged ${formatETH(tx.amount)} to Rollup`
-      default:
-        return `Transaction: ${formatETH(tx.amount)}`
+    const variables = {
+      amount: formatETH(tx.amount),
+      recipient: tx.recipient
     }
+
+    return t(`Hooks.useBlockchain.description.${tx.type}`, variables)
   }
 
   const currentTransactions = (hideRollupTab || activeTab === 'ethereum') ? ethereumTransactions : rollupTransactions
@@ -135,7 +123,7 @@ const TransactionHistoryOverlay: React.FC<TransactionHistoryOverlayProps> = ({
       `}>
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-gray-700">
-          <h3 className="text-lg font-semibold text-gray-100">Transaction History</h3>
+          <h3 className="text-lg font-semibold text-gray-100">{t('Components.TransactionHistoryOverlay.0nrjthjx')}</h3>
           <button
             onClick={onToggle}
             className="text-gray-400 hover:text-gray-200 transition-colors cursor-pointer"
@@ -150,10 +138,10 @@ const TransactionHistoryOverlay: React.FC<TransactionHistoryOverlayProps> = ({
         {hideRollupTab ? (
           <div className="border-b border-gray-700">
             <div className="px-4 py-3 text-sm font-medium text-blue-400 border-b-2 border-blue-400 bg-blue-900/20">
-              <div>Ethereum Mainnet ({ethereumTransactions.length})</div>
+              <div>{t('Components.TransactionHistoryOverlay.lt5so7n3')} ({ethereumTransactions.length})</div>
               {ethereumPendingCount > 0 && (
                 <div className="text-xs text-yellow-400 mt-1">
-                  {ethereumPendingCount} pending...
+                  {ethereumPendingCount} {t('Components.TransactionHistoryOverlay.ebqteytk')}
                 </div>
               )}
             </div>
@@ -168,10 +156,10 @@ const TransactionHistoryOverlay: React.FC<TransactionHistoryOverlayProps> = ({
                   : 'text-gray-400 hover:text-gray-200'
               }`}
             >
-              <div>Ethereum Mainnet ({ethereumTransactions.length})</div>
+              <div>{t('Components.TransactionHistoryOverlay.lt5so7n3')} ({ethereumTransactions.length})</div>
               {ethereumPendingCount > 0 && (
                 <div className="text-xs text-yellow-400 mt-1">
-                  {ethereumPendingCount} pending...
+                  {ethereumPendingCount} {t('Components.TransactionHistoryOverlay.ebqteytk')}
                 </div>
               )}
             </button>
@@ -183,10 +171,10 @@ const TransactionHistoryOverlay: React.FC<TransactionHistoryOverlayProps> = ({
                   : 'text-gray-400 hover:text-gray-200'
               }`}
             >
-              <div>Rollup ({rollupTransactions.length})</div>
+              <div>{t('Components.TransactionHistoryOverlay.ox3bl2wf')} ({rollupTransactions.length})</div>
               {rollupPendingCount > 0 && (
                 <div className="text-xs text-yellow-400 mt-1">
-                  {rollupPendingCount} pending...
+                  {rollupPendingCount} {t('Components.TransactionHistoryOverlay.ebqteytk')}
                 </div>
               )}
             </button>
@@ -200,7 +188,7 @@ const TransactionHistoryOverlay: React.FC<TransactionHistoryOverlayProps> = ({
               <svg className="w-12 h-12 text-gray-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
-              <p className="text-gray-400">No transactions yet</p>
+              <p className="text-gray-400">{t('Components.TransactionHistoryOverlay.oyp98wza')}</p>
             </div>
           ) : (
             <div className="space-y-3">
@@ -232,13 +220,13 @@ const TransactionHistoryOverlay: React.FC<TransactionHistoryOverlayProps> = ({
                             ? 'bg-green-500/20 text-green-400'
                             : 'bg-red-500/20 text-red-400'
                         }`}>
-                          {tx.status}
+                          {t('Components.TransactionHistoryOverlay.' + tx.status)}
                         </span>
                       </div>
 
                       <div className="flex items-center justify-between mt-1">
                         <p className="text-xs text-gray-400">
-                          Fee: {formatETH(tx.fee)}
+                          {t('Components.TransactionHistoryOverlay.aux4d6fd')} {formatETH(tx.fee)}
                         </p>
                         <p className="text-xs text-gray-400">
                           {formatTime(tx.timestamp)}
@@ -249,7 +237,7 @@ const TransactionHistoryOverlay: React.FC<TransactionHistoryOverlayProps> = ({
 
                       {tx.errorMessage && (
                         <p className="text-xs text-red-400 mt-1">
-                          Error: {tx.errorMessage}
+                          {t('Components.TransactionHistoryOverlay.pwetB6dD')} {tx.errorMessage}
                         </p>
                       )}
                     </div>

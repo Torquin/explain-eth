@@ -303,7 +303,49 @@
       "hixjyuar": "Échouée"
     },
     "TransactionHistoryOverlay": {
-      
+      "0nrjthjx": "Historique des transactions",
+      "lt5so7n3": "Ethereum Mainnet",
+      "ebqteytk": "en attente...",
+      "ox3bl2wf": "Rollup",
+      "oyp98wza": "Aucune transaction en cours",
+      "aux4d6fd": "Frais:",
+      "pwetB6dD": "Erreur:",
+      "pending": "en attente",
+      "confirmed": "confirmée"
+    }
+  },
+  "Hooks": {
+    "useBlockchain": {
+      "pending": {
+        "send": "Envoi de {{amount}} à {{recipient}}...",
+        "purchase_nft": "Achat du NFT pour {{amount}}...",
+        "sell_nft": "Vente du NFT pour {{amount}}...",
+        "deposit_earnings": "Dépôt de {{amount}} pour générer des intérêts...",
+        "withdraw_earnings": "Retrait de {{amount}} depuis les intérêts...",
+        "claim_earnings": "Réclamation de {{amount}} d'intérêts...",
+        "bridge": "Transfert de {{amount}} vers le Rollup...",
+        "default": "Traitement de {{type}}..."
+      },
+      "confirmed": {
+        "send": "Envoyé {{amount}} à {{recipient}}",
+        "purchase_nft": "NFT acheté pour {{amount}}",
+        "sell_nft": "NFT vendu pour {{amount}}",
+        "deposit_earnings": "Déposé {{amount}} pour générer des intérêts",
+        "withdraw_earnings": "Retiré {{amount}} depuis les intérêts",
+        "claim_earnings": "Réclamé {{amount}} d'intérêts",
+        "bridge": "Transféré {{amount}} vers le Rollup",
+        "default": "Confirmé : {{type}}"
+      },
+      "description": {
+        "send": "Envoyé {{amount}} à {{recipient}}",
+        "purchase_nft": "NFT acheté pour {{amount}}",
+        "sell_nft": "NFT vendu pour {{amount}}",
+        "deposit_earnings": "Déposé {{amount}} pour générer des intérêts",
+        "withdraw_earnings": "Retiré {{amount}} depuis les intérêts",
+        "claim_earnings": "Réclamé {{amount}} d'intérêts",
+        "bridge": "Transféré {{amount}} vers le Rollup",
+        "default": "Transaction : {{amount}}"
+      }
     }
   },
   "Characters": {
