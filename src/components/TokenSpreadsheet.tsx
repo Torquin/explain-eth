@@ -264,7 +264,7 @@ const TokenSpreadsheet: React.FC<TokenSpreadsheetProps> = ({
                     {t('Components.TokenSpreadsheet.9ga61w4o')}
                   </th>
                   <th className="px-4 py-3 text-right text-sm font-medium text-gray-300 border-b border-gray-600">
-                    {t('Components.TokenSpreadsheet.9wlk9s6t')}
+                    {t('Components.TokenSpreadsheet.9wlk9s6p')}
                   </th>
                 </tr>
               </thead>
@@ -347,7 +347,7 @@ const TokenSpreadsheet: React.FC<TokenSpreadsheetProps> = ({
                         {t('Components.TokenSpreadsheet.9ga61w4o')}
                       </th>
                       <th className="px-4 py-3 text-right text-sm font-medium text-gray-300 border-b border-gray-600">
-                        {t('Components.TokenSpreadsheet.9wlk9s6t')}
+                        {t('Components.TokenSpreadsheet.9wlk9s6p')}
                       </th>
                     </tr>
                   </thead>
@@ -411,7 +411,7 @@ const TokenSpreadsheet: React.FC<TokenSpreadsheetProps> = ({
         }`}>
           <div className="bg-gray-700 px-4 py-3 border-b border-gray-600">
             <h3 className="text-lg font-semibold text-gray-100 text-center">
-              {showTokens === 'both' ? 'Token Balances' : `${showTokens} Balances`}
+              {showTokens === 'both' ? t('Components.TokenSpreadsheet.k12othon') : `${showTokens} ${t('Components.TokenSpreadsheet.k12othom')}`}
             </h3>
           </div>
           <div className="overflow-x-auto"
@@ -427,7 +427,7 @@ const TokenSpreadsheet: React.FC<TokenSpreadsheetProps> = ({
                     <th className="px-4 py-3 text-right text-sm font-medium text-gray-300 border-b border-gray-600">
                       <div className="flex items-center justify-center space-x-2">
                         <img src="/img/eth.svg" alt="ETH" className="w-5 h-5" />
-                        <span>ETH {t('Components.TokenSpreadsheet.9wlk9s6t')}</span>
+                        <span>{t('Components.TokenSpreadsheet.9wlk9s6t')}</span>
                       </div>
                     </th>
                   )}
@@ -435,7 +435,7 @@ const TokenSpreadsheet: React.FC<TokenSpreadsheetProps> = ({
                     <th className="px-4 py-3 text-right text-sm font-medium text-gray-300 border-b border-gray-600">
                       <div className="flex items-center justify-center space-x-2">
                         <img src="/img/usdc.svg" alt="USDC" className="w-5 h-5" />
-                        <span>USDC {t('Components.TokenSpreadsheet.9wlk9s6t')}</span>
+                        <span>{t('Components.TokenSpreadsheet.9wlk9s6i')}</span>
                       </div>
                     </th>
                   )}

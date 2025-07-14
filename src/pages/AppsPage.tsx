@@ -92,13 +92,13 @@ const AppsPage: React.FC = () => {
               <div className="my-12">
                 <CodeBlock
                   title="PaymentSplitter.sol"
-                  code={`PAYMENT SPLITTER PROGRAM
+                  code={`${t('AppsPage.tny1arl1')}
 
-WHENEVER THIS PROGRAM RECEIVES ETH:
-  SEND 33% TO ${getRecipientEmoji('Alice')} ALICE (${getRecipientAddressTruncated('Alice')}),
-  AND SEND 33% TO ${getRecipientEmoji('Bob')} BOB (${getRecipientAddressTruncated('Bob')}),
-  AND SEND 33% TO ${getRecipientEmoji('Carol')} CAROL (${getRecipientAddressTruncated('Carol')})
-END`}
+${t('AppsPage.p7d5xchm')}
+  ${t('AppsPage.69keso3i')} 33% ${t('AppsPage.khv1inpf')} ${getRecipientEmoji('Alice')} ALICE (${getRecipientAddressTruncated('Alice')}),
+  ${t('AppsPage.fapaosw0')} ${t('AppsPage.69keso3i')} 33% ${t('AppsPage.khv1inpf')} ${getRecipientEmoji('Bob')} BOB (${getRecipientAddressTruncated('Bob')}),
+  ${t('AppsPage.fapaosw0')} ${t('AppsPage.69keso3i')} 33% ${t('AppsPage.khv1inpf')} ${getRecipientEmoji('Carol')} CAROL (${getRecipientAddressTruncated('Carol')})
+${t('AppsPage.o7x8p4nx')}`}
                   className="max-w-2xl mx-auto"
                 />
               </div>
@@ -179,13 +179,12 @@ END`}
               <div className="my-12">
                 <CodeBlock
                   title="PaymentSplitter2.sol"
-                  code={`PAYMENT SPLITTER 2 PROGRAM
-
-WHENEVER THIS PROGRAM RECEIVES ETH:
-  SEND 3̶3̶% 50% TO ${getRecipientEmoji('Alice')} ALICE (${getRecipientAddressTruncated('Alice')}),
-  AND SEND 3̶3̶% 25% TO ${getRecipientEmoji('Bob')} BOB (${getRecipientAddressTruncated('Bob')}),
-  AND SEND 3̶3̶% 25% TO ${getRecipientEmoji('Carol')} CAROL (${getRecipientAddressTruncated('Carol')})
-END`}
+                  code={`${t('AppsPage.tny1arlq')}
+${t('AppsPage.p7d5xchm')}
+  ${t('AppsPage.69keso3i')} 3̶3̶% 50% ${t('AppsPage.khv1inpf')} ${getRecipientEmoji('Alice')} ALICE (${getRecipientAddressTruncated('Alice')}),
+  ${t('AppsPage.fapaosw0')} ${t('AppsPage.69keso3i')} 3̶3̶% 25% ${t('AppsPage.khv1inpf')} ${getRecipientEmoji('Bob')} BOB (${getRecipientAddressTruncated('Bob')}),
+  ${t('AppsPage.fapaosw0')} ${t('AppsPage.69keso3i')} 3̶3̶% 25% ${t('AppsPage.khv1inpf')} ${getRecipientEmoji('Carol')} CAROL (${getRecipientAddressTruncated('Carol')})
+${t('AppsPage.o7x8p4nx')}`}
                   className="max-w-2xl mx-auto"
                 />
               </div>

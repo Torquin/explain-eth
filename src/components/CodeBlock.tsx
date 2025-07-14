@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 // IDE-like Code Block Component
 interface CodeBlockProps {
@@ -8,7 +9,8 @@ interface CodeBlockProps {
 }
 
 const CodeBlock: React.FC<CodeBlockProps> = ({ title, code, className = '' }) => {
-
+  const { t } = useTranslation();
+  
   return (
     <div className={`bg-gray-900 border border-gray-700 rounded-lg overflow-hidden shadow-lg ${className}`}>
       {/* IDE Header */}
@@ -28,17 +30,37 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ title, code, className = '' }) =>
             // Simple syntax highlighting for our pseudocode
             let highlightedLine = line
 
-            // Highlight keywords
+            const keywords = [
+              t('AppsPage.p7d5xchm'), // "WHEN THIS PROGRAM RECEIVES ETH:"
+              t('AppsPage.69keso3i'), // "SEND"
+              t('AppsPage.khv1inpf'), // "TO"
+              t('AppsPage.fapaosw0'), // "AND"
+              t('AppsPage.o7x8p4nx'), // "END"
+              // Add more if needed
+            ];
+
+            const escapedKeywords = keywords.map(word =>
+              word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+            );
+
+            const regex = new RegExp(`(${escapedKeywords.join('|')})`, 'g');
+
             highlightedLine = highlightedLine.replace(
-              /(WHENEVER|THIS PROGRAM|RECEIVES|ETH|SEND|OF THE TOTAL|TO|END)/g,
+              regex,
               '<span class="text-blue-400 font-semibold">$1</span>'
-            )
+            );
 
             // Highlight program name
+            const baseTitle = t('AppsPage.tny1arl1'); // e.g., "DIVISEUR DE PAIEMENTS"
+            const programRegex = new RegExp(
+              `(${baseTitle.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?:\\s2)?)`,
+              'g'
+            );
+
             highlightedLine = highlightedLine.replace(
-              /(PAYMENT SPLITTER (?:2 )?PROGRAM)/g,
+              programRegex,
               '<span class="text-pink-400 font-bold">$1</span>'
-            )
+            );
 
             // Highlight addresses (0x...)
             highlightedLine = highlightedLine.replace(

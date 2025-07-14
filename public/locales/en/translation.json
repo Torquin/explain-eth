@@ -118,7 +118,14 @@
     "xangcnuf": "As I mentioned at the very beginning, we can use all sorts of currencies on the Ethereum network. Including digital dollars!",
     "os13o1p2": "Let's explore the basics of",
     "kw48qy5p": "tokens",
-    "kw48qy51": "Oui!"
+    "kw48qy51": "Oui!",
+    "tny1arl1": "PAYMENT SPLITTER PROGRAM",
+    "tny1arlq": "PAYMENT SPLITTER 2 PROGRAM",
+    "p7d5xchm": "WHENEVER THIS PROGRAM RECEIVES ETH:",
+    "69keso3i": "SEND",
+    "fapaosw0": "AND",
+    "khv1inpf": "TO",
+    "o7x8p4nx": "END"
   },
   "TokensPage": {
     "ft3itozj": "Tokens",
@@ -242,7 +249,10 @@
     "TokenSpreadsheet": {
       "zsn3rnrc": "You",
       "k12othom": "Balances",
-      "9wlk9s6t": "Balance",
+      "k12othon": "Token Balances",
+      "9wlk9s6t": "ETH Balance",
+      "9wlk9s6i": "USDC Balance",
+      "9wlk9s6p": "Balance",
       "9ga61w4o": "Address",
       "6inqv678": "Each token maintains its own table of who owns what. Your address can hold multiple types of tokens simultaneously because it has a row in every token's table."
     },

@@ -118,7 +118,14 @@
     "xangcnuf": "Oui! Comme je le disais au tout début, on peut utiliser toutes sortes de devises sur Ethereum. Y compris des dollars numériques.",
     "os13o1p2": "Voyons maintenant les bases des",
     "kw48qy5p": "jetons.",
-    "kw48qy51": "Oui!"
+    "kw48qy51": "Oui!",
+    "tny1arl1": "PROGRAMME DIVISEUR DE PAIEMENTS",
+    "tny1arlq": "PROGRAMME DIVISEUR DE PAIEMENTS 2",
+    "p7d5xchm": "QUAND CE PROGRAMME REÇOIT DE L'ETH:",
+    "69keso3i": "ENVOYER",
+    "fapaosw0": "ET",
+    "khv1inpf": "À",
+    "o7x8p4nx": "FIN"
   },
   "TokensPage": {
     "ft3itozj": "Jetons",
@@ -242,7 +249,10 @@
     "TokenSpreadsheet": {
       "zsn3rnrc": "Toi",
       "k12othom": "Soldes",
-      "9wlk9s6t": "Solde",
+      "k12othon": "Solde des jetons",
+      "9wlk9s6t": "Solde ETH",
+      "9wlk9s6i": "Solde USDC",
+      "9wlk9s6p": "Solde",
       "9ga61w4o": "Adresse",
       "6inqv678": "Chaque jeton a sa propre table des possesseurs avec leurs soldes. Ton adresse peut posséder plusieurs jetons simultanément puisqu'elle figure dans chaque table."
     },
