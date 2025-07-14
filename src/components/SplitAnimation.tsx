@@ -3,6 +3,7 @@ import { Recipient } from '../types/blockchain'
 import { formatETHTruncated } from '../utils/transactions'
 import { getRecipientEmoji, getRecipientBackgroundColor, getRecipientAddressTruncated } from '../utils/recipients'
 import CircularCountdown from './CircularCountdown'
+import { useTranslation } from 'react-i18next';
 
 // Custom hook for intersection observer
 const useIntersectionObserver = (threshold = 0.1) => {
@@ -58,6 +59,7 @@ const SplitAnimation: React.FC<SplitAnimationProps> = ({
   carolPercent = 33.33,
   totalAmount = 0.3
 }) => {
+  const { t } = useTranslation();
   // Calculate split amounts
   const aliceAmount = (totalAmount * alicePercent) / 100
   const bobAmount = (totalAmount * bobPercent) / 100
@@ -264,10 +266,10 @@ const SplitAnimation: React.FC<SplitAnimationProps> = ({
             {/* Content */}
             <div className="flex-1">
               <div className="text-white font-medium">
-                Transaction
+                {t('Components.SplitAnimation.fbw7t7ho')}
               </div>
               <div className="text-gray-300 text-sm">
-                Send {formatETHTruncated(totalAmount)} to Payment Splitter
+                {t('Components.SplitAnimation.mxtkm9cs')} {formatETHTruncated(totalAmount)} {t('Components.SplitAnimation.iuwp25xa')}
               </div>
             </div>
 
@@ -279,7 +281,7 @@ const SplitAnimation: React.FC<SplitAnimationProps> = ({
                 : 'bg-green-500/20 text-green-400'
               }
             `}>
-              {transactionStatus === 'pending' ? 'Pending' : 'Confirmed'}
+              {transactionStatus === 'pending' ? t('Components.SplitAnimation.33tojjyv') : t('Components.SplitAnimation.7xsx4f6x')}
             </div>
           </div>
         </div>
@@ -297,7 +299,7 @@ const SplitAnimation: React.FC<SplitAnimationProps> = ({
               ${splitterCharged ? 'border-2 border-white shadow-lg shadow-white/20' : 'border border-green-500/60'}
             `}>
               <div className="text-xl sm:text-2xl mb-1 sm:mb-2">⚡</div>
-              <div className="text-sm sm:text-lg font-semibold text-gray-100 mb-1 sm:mb-2">Payment Splitter</div>
+              <div className="text-sm sm:text-lg font-semibold text-gray-100 mb-1 sm:mb-2">{t('Components.SplitAnimation.mf9txst2')}</div>
               {/* Full address on desktop, truncated on mobile */}
               <div className="text-xs text-gray-400 break-all sm:hidden">
                 0x3f81...3214
@@ -368,10 +370,10 @@ const SplitAnimation: React.FC<SplitAnimationProps> = ({
       {/* Status Message */}
       <div className="mt-4 text-center">
         <div className="text-white text-sm bg-black bg-opacity-50 px-3 py-1 rounded inline-block">
-          {phase === 'pending' && `Sending ${formatETHTruncated(totalAmount)} to Payment Splitter`}
-          {phase === 'splitting' && 'Payment Splitter executing'}
-          {phase === 'distributing' && `Automatically sending ${formatETHTruncated(aliceAmount)} to Alice, ${formatETHTruncated(bobAmount)} to Bob, and ${formatETHTruncated(carolAmount)} to Carol`}
-          {phase === 'resetting' && 'Transaction complete!'}
+          {phase === 'pending' && `${t('Components.SplitAnimation.eexeo9l8')} ${formatETHTruncated(totalAmount)} ${t('Components.SplitAnimation.iuwp25xa')}`}
+          {phase === 'splitting' && t('Components.SplitAnimation.uxznyw2d')}
+          {phase === 'distributing' && `${t('Components.SplitAnimation.dc5kgp61')} ${formatETHTruncated(aliceAmount)} ${t('Components.SplitAnimation.oqvu2dyg')} Alice, ${formatETHTruncated(bobAmount)} ${t('Components.SplitAnimation.oqvu2dyg')} Bob, ${t('Components.SplitAnimation.tvsnv6yy')} ${formatETHTruncated(carolAmount)} ${t('Components.SplitAnimation.oqvu2dyg')} Carol`}
+          {phase === 'resetting' && t('Components.SplitAnimation.l3sxx5o7')}
         </div>
       </div>
     </div>

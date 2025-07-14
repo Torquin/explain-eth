@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, ReactNode } from 'react'
 import { getRecipientEmoji, getRecipientBackgroundColor } from '../utils/recipients'
+import { useTranslation } from 'react-i18next';
 
 // Type definitions
 interface QuadrantProps {
@@ -47,16 +48,17 @@ const useIntersectionObserver = (threshold = 0.1) => {
 
 // Individual quadrant component with subtle background variations
 const Quadrant = ({ title, children }: QuadrantProps) => {
+  const { t } = useTranslation();
   // Define subtle background colors for each quadrant type
   const getQuadrantBackground = (title: string) => {
     switch (title) {
-      case 'Variable Split':
+      case t('AppsPage.d59olyrm'):
         return 'bg-blue-900/20 border-blue-700/30'
-      case 'Dynamic Recipients':
+      case t('AppsPage.seejn4xv'):
         return 'bg-green-900/20 border-green-700/30'
-      case 'Fee Flow':
+      case t('AppsPage.ed3ubj14'):
         return 'bg-yellow-900/20 border-yellow-700/30'
-      case 'Betting':
+      case t('AppsPage.2lbj5kiq'):
         return 'bg-purple-900/20 border-purple-700/30'
       default:
         return 'bg-gray-800 border-gray-700'
@@ -627,32 +629,33 @@ interface AppsAbstractQuadrantProps {
 }
 
 const AppsAbstractQuadrant: React.FC<AppsAbstractQuadrantProps> = ({ quadrantType }) => {
+  const { t } = useTranslation();
   const { ref, isVisible } = useIntersectionObserver(0.1)
 
   // Helper function to render individual quadrant
   const renderQuadrant = (title: string) => {
     switch (title) {
-      case 'Variable Split':
+      case t('AppsPage.d59olyrm'):
         return (
-          <Quadrant title="Variable Split">
+          <Quadrant title={t('AppsPage.d59olyrm')}>
             <VariableProportions isVisible={isVisible} />
           </Quadrant>
         )
-      case 'Dynamic Recipients':
+      case t('AppsPage.seejn4xv'):
         return (
-          <Quadrant title="Dynamic Recipients">
+          <Quadrant title={t('AppsPage.seejn4xv')}>
             <DynamicRecipients isVisible={isVisible} />
           </Quadrant>
         )
-      case 'Fee Flow':
+      case t('AppsPage.ed3ubj14'):
         return (
-          <Quadrant title="Fee Flow">
+          <Quadrant title={t('AppsPage.ed3ubj14')}>
             <CashbackFlow isVisible={isVisible} />
           </Quadrant>
         )
-      case 'Betting':
+      case t('AppsPage.2lbj5kiq'):
         return (
-          <Quadrant title="Betting">
+          <Quadrant title={t('AppsPage.2lbj5kiq')}>
             <BettingContract isVisible={isVisible} />
           </Quadrant>
         )
@@ -674,10 +677,10 @@ const AppsAbstractQuadrant: React.FC<AppsAbstractQuadrantProps> = ({ quadrantTyp
   return (
     <div ref={ref} className="w-full max-w-4xl mx-auto bg-gray-900 rounded-lg p-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {renderQuadrant('Variable Split')}
-        {renderQuadrant('Dynamic Recipients')}
-        {renderQuadrant('Fee Flow')}
-        {renderQuadrant('Betting')}
+        {renderQuadrant(t('AppsPage.d59olyrm'))}
+        {renderQuadrant(t('AppsPage.seejn4xv'))}
+        {renderQuadrant(t('AppsPage.ed3ubj14'))}
+        {renderQuadrant(t('AppsPage.2lbj5kiq'))}
       </div>
     </div>
   )

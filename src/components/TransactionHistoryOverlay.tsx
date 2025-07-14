@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Transaction } from '../types/blockchain'
 import CircularCountdown from './CircularCountdown'
 import { TRANSACTION_DURATION, formatETH } from '../utils/transactions'
+import { useTranslation } from 'react-i18next';
 
 interface TransactionHistoryOverlayProps {
   ethereumTransactions: Transaction[]
@@ -22,6 +23,7 @@ const TransactionHistoryOverlay: React.FC<TransactionHistoryOverlayProps> = ({
   onToggle,
   hideRollupTab = false
 }) => {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<'ethereum' | 'rollup'>('ethereum')
 
   const formatTime = (date: Date) => {

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Recipient } from '../types/blockchain'
 import { getRecipientEmoji } from '../utils/recipients'
+import { TFunction } from 'i18next'
+import { useTranslation } from 'react-i18next';
 
 interface CharacterDialogueProps {
   character: Recipient
@@ -11,7 +13,7 @@ interface CharacterDialogueProps {
 }
 
 // Dialogue data based on personality and wealth levels
-const dialogueData: Record<Recipient, {
+const dialogueData = (t: TFunction): Record<Recipient, {
   personality: string
   dialogues: {
     broke: string[]
@@ -19,135 +21,147 @@ const dialogueData: Record<Recipient, {
     comfortable: string[]
     wealthy: string[]
   }
-}> = {
+}> => ({
   Alice: {
     personality: 'funny',
     dialogues: {
       broke: [
-        "I'm so broke, can't even afford to pay attention! 😅",
-        "My wallet's empty, my dating life's just as tempty! 💸",
-        "I have ninety-nine problems and funds are the fun one! 🤷‍♀️",
-        "Being broke is no joke, but my humor's no hoax! 😂"
+        t('Characters.alice_b1'),
+        t('Characters.alice_b2'),
+        t('Characters.alice_b3'),
+        t('Characters.alice_b4'),
       ],
       poor: [
-        "Finally! Some change to exchange for coffee! ☕",
-        "Look at me, living fancy with pocket money! 💅",
-        "I'm basically the Warren Buffett of pocket stuff-it! 📈",
-        "This coin's burning, my pocket's yearning! 🔥"
+        t('Characters.alice_p1'),
+        t('Characters.alice_p2'),
+        t('Characters.alice_p3'),
+        t('Characters.alice_p4'),
       ],
       comfortable: [
-        "Now we're talking, no more financial walking! 🍜",
-        "With great wealth comes great stealth... in buying memes! 🎭",
-        "I'm feeling so rich, might tip without a glitch! 💰",
-        "Time to update my profile: 'Crypto Lifestyle'! ✨"
+        t('Characters.alice_c1'),
+        t('Characters.alice_c2'),
+        t('Characters.alice_c3'),
+        t('Characters.alice_c4'),
       ],
       wealthy: [
-        "I'm so rich, I switch coins for bookmarks! 📚",
-        "They see me rollin', they're trollin' my balance! 🎵",
-        "I don't always check wealth, but when I do, it's true! 😎",
-        "Rich enough to buy Twitter... but that ship has sailed! 🐦"
-      ]
-    }
+        t('Characters.alice_w1'),
+        t('Characters.alice_w2'),
+        t('Characters.alice_w3'),
+        t('Characters.alice_w4'),
+      ],
+    },
   },
   Bob: {
     personality: 'serious',
     dialogues: {
       broke: [
-        "This concerning state requires attention with intention.",
-        "I must reassess with finesse my risk protocols.",
-        "The current balance demands guidance for diversified streams.",
-        "Financial literacy is priority with clarity indeed."
+        t('Characters.bob_b1'),
+        t('Characters.bob_b2'),
+        t('Characters.bob_b3'),
+        t('Characters.bob_b4'),
       ],
       poor: [
-        "A modest start, a work of art for portfolio building.",
-        "This foundation with dedication shall support wealth creation.",
-        "Small amounts with careful counts compound through time.",
-        "I shall allocate with care and fate, following reason's season."
+        t('Characters.bob_p1'),
+        t('Characters.bob_p2'),
+        t('Characters.bob_p3'),
+        t('Characters.bob_p4'),
       ],
       comfortable: [
-        "Acceptable balance with valance providing flexibility.",
-        "Strategic investments with commitments maintaining liquidity.",
-        "The portfolio shows growth that glows with diversification.",
-        "I can consider with wonder instruments of sophistication."
+        t('Characters.bob_c1'),
+        t('Characters.bob_c2'),
+        t('Characters.bob_c3'),
+        t('Characters.bob_c4'),
       ],
       wealthy: [
-        "Excellent reflection of sound planning with commanding execution.",
-        "Accumulation with calculation demonstrates disciplined construction.",
-        "I shall focus with locus on preservation and optimization.",
-        "This positions with precision for independence and deliverance."
-      ]
-    }
+        t('Characters.bob_w1'),
+        t('Characters.bob_w2'),
+        t('Characters.bob_w3'),
+        t('Characters.bob_w4'),
+      ],
+    },
   },
   Carol: {
     personality: 'miserly',
     dialogues: {
       broke: [
-        "Every penny's plenty! I track each fraction with action! 💰",
-        "This is unacceptable! I must hoard with accord! 😤",
-        "I'm calculating with fascination the cost of each breath! 📊",
-        "Zero balance means zero spending - discipline with precision! 🔒"
+        t('Characters.carol_b1'),
+        t('Characters.carol_b2'),
+        t('Characters.carol_b3'),
+        t('Characters.carol_b4'),
       ],
       poor: [
-        "Finally! But not a single jingle shall I waste! 💎",
-        "This coin joins my mattress stash with a dash! 🛏️",
-        "I'll guard this treasure with pleasure like a dragon! 🐉",
-        "Every fee's a spree of theft from my wealth! 😠"
+        t('Characters.carol_p1'),
+        t('Characters.carol_p2'),
+        t('Characters.carol_p3'),
+        t('Characters.carol_p4'),
       ],
       comfortable: [
-        "Good mood, but I could have MORE in store! 📈",
-        "Rich enough to afford... nothing more, that's for sure! 🚫",
-        "This balance is nice with spice, but compound interest is dearest! 💹",
-        "I'm saving with craving, my wealth's behaving! 🏦"
+        t('Characters.carol_c1'),
+        t('Characters.carol_c2'),
+        t('Characters.carol_c3'),
+        t('Characters.carol_c4'),
       ],
       wealthy: [
-        "Excellent! Now I can be tight with delight! 💸",
-        "Rich enough to buy with a sigh, too cheap to keep! 🛒",
-        "My wealth grows with flows while others spend and bend! 📊",
-        "So wealthy and stealthy, I charge myself rent for each thought! 🏠"
-      ]
-    }
+        t('Characters.carol_w1'),
+        t('Characters.carol_w2'),
+        t('Characters.carol_w3'),
+        t('Characters.carol_w4'),
+      ],
+    },
   },
   Eve: {
     personality: 'mysterious',
     dialogues: {
       broke: [
-        "Interesting... surveillance with vigilance reveals priorities.",
-        "Zero balance with valence. Perfect anonymity in harmony.",
-        "The absence of wealth with stealth is sometimes the greatest treasure.",
-        "Empty wallets with mallets tell stories that intrigue and fatigue..."
+        t('Characters.eve_b1'),
+        t('Characters.eve_b2'),
+        t('Characters.eve_b3'),
+        t('Characters.eve_b4'),
       ],
       poor: [
-        "Small amounts with counts... easier to move with groove undetected.",
-        "Modest holdings with moldings. The wise disguise discretion's protection.",
-        "This balance with valance serves my purposes... for now, somehow.",
-        "Sometimes smallest with tallest moves hide secrets of connection."
+        t('Characters.eve_p1'),
+        t('Characters.eve_p2'),
+        t('Characters.eve_p3'),
+        t('Characters.eve_p4'),
       ],
       comfortable: [
-        "Sufficient funds with runs for my... operations, no questions or suggestions.",
-        "This amount with count provides perfect cover for my sessions.",
-        "Comfortable enough to blend and bend, avoiding attention's prevention.",
-        "The ideal balance with valance for one who shadows with echoes."
+        t('Characters.eve_c1'),
+        t('Characters.eve_c2'),
+        t('Characters.eve_c3'),
+        t('Characters.eve_c4'),
       ],
       wealthy: [
-        "Wealth brings visibility with ability. Visibility brings... complications.",
-        "Rich enough to fund with stunned operations, discrete in relations.",
-        "This fortune with portion opens doors... and closes with poses.",
-        "With great wealth and stealth comes responsibility... and revelations."
-      ]
+        t('Characters.eve_w1'),
+        t('Characters.eve_w2'),
+        t('Characters.eve_w3'),
+        t('Characters.eve_w4'),
+      ],
+    },
+  },
+  Splitter: {
+    personality: 'mysterious',
+    dialogues: {
+      broke: [],
+      poor: [],
+      comfortable: [],
+      wealthy: []
     }
   }
+})
+
+type WealthLevel = 'broke' | 'poor' | 'comfortable' | 'wealthy';
+
+const getWealthLevel = (balance: number): WealthLevel => {
+  if (balance === 0) return 'broke';
+  if (balance < 0.1) return 'poor';
+  if (balance < 0.5) return 'comfortable';
+  return 'wealthy';
 }
 
-const getWealthLevel = (balance: number): keyof typeof dialogueData.Alice.dialogues => {
-  if (balance === 0) return 'broke'
-  if (balance < 0.1) return 'poor'
-  if (balance < 0.5) return 'comfortable'
-  return 'wealthy'
-}
-
-const getRandomDialogue = (character: Recipient, balance: number): string => {
+const getRandomDialogue = (character: Recipient, balance: number, t: TFunction): string => {
+  const dialogueDataWithT = dialogueData(t);  // use function with t
   const wealthLevel = getWealthLevel(balance)
-  const characterData = dialogueData[character]
+  const characterData = dialogueDataWithT[character]
   
   if (!characterData) return "Hello there!"
   
@@ -155,32 +169,33 @@ const getRandomDialogue = (character: Recipient, balance: number): string => {
   return dialogues[Math.floor(Math.random() * dialogues.length)]
 }
 
-const CharacterDialogue: React.FC<CharacterDialogueProps> = ({
+const CharacterDialogue: React.FC<Omit<CharacterDialogueProps, 't'>> = ({
   character,
   balance,
   isVisible,
   onComplete,
   className = ''
 }) => {
+  const { t } = useTranslation();  // get t here
+
   const [dialogue, setDialogue] = useState('')
   const [isAnimating, setIsAnimating] = useState(false)
 
   useEffect(() => {
     if (isVisible) {
-      setDialogue(getRandomDialogue(character, balance))
+      setDialogue(getRandomDialogue(character, balance, t))  // pass t here
       setIsAnimating(true)
 
-      // Auto-dismiss after 4 seconds
       const timer = setTimeout(() => {
         setIsAnimating(false)
         setTimeout(() => {
           onComplete()
-        }, 300) // Wait for fade out animation
+        }, 300)
       }, 4000)
 
       return () => clearTimeout(timer)
     }
-  }, [character, balance, isVisible, onComplete])
+  }, [character, balance, isVisible, onComplete, t])  // include t in deps
 
   if (!isVisible) return null
 

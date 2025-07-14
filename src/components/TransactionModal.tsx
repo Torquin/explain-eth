@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import CircularCountdown from './CircularCountdown'
 import { Transaction } from '../types/blockchain'
 import { TRANSACTION_DURATION, ROLLUP_TRANSACTION_DURATION } from '../utils/transactions'
+import { useTranslation } from 'react-i18next';
 
 interface TransactionModalProps {
   isOpen: boolean
@@ -18,6 +19,7 @@ const TransactionModal: React.FC<TransactionModalProps> = ({
   onClose,
   pendingTransaction
 }) => {
+  const { t } = useTranslation();
   const isPending = pendingTransaction !== null
   const duration = pendingTransaction?.chain === 'rollup' ? ROLLUP_TRANSACTION_DURATION : TRANSACTION_DURATION
 
@@ -73,10 +75,10 @@ const TransactionModal: React.FC<TransactionModalProps> = ({
           <div className="flex-1">
             <h3 className={`text-sm font-medium ${isPending ? 'text-yellow-400' : type === 'success' ? 'text-green-400' : 'text-red-400'}`}>
               {isPending
-                ? `Transaction #${pendingTransaction?.nonce} Pending`
+                ? `${t('Components.TransactionModal.6xfg84mk')} #${pendingTransaction?.nonce} ${t('Components.TransactionModal.gfsscx3u')}`
                 : type === 'success'
-                ? 'Transaction Successful'
-                : 'Transaction Failed'
+                ? `${t('Components.TransactionModal.6xfg84mk')} ${t('Components.TransactionModal.rn75fc49')}`
+                : `${t('Components.TransactionModal.6xfg84mk')} ${t('Components.TransactionModal.hixjyuar')}`
               }
             </h3>
             <div className="text-gray-300 text-sm mt-1">{message}</div>
